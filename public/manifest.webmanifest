@@ -1,0 +1,17 @@
+{
+  "name": "Preteen 分類挑戰",
+  "short_name": "分類挑戰",
+  "description": "平板橫向使用的 Preteen 分類挑戰遊戲",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff8ef",
+  "theme_color": "#fff8ef",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
