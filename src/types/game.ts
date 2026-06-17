@@ -16,6 +16,11 @@ export interface Question {
   enabled: boolean
 }
 
+export interface GameData {
+  categories: Category[]
+  questions: Question[]
+}
+
 export interface GameSession {
   usedQuestionIds: string[]
   currentCategoryId: string | null
