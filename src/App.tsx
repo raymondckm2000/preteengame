@@ -1,121 +1,163 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import './App.css'
+import { sortedCategories } from './data/categories'
+import { enabledQuestions } from './data/questions'
+import { useGameSession } from './hooks/useGameSession'
+import { CategoryPage } from './pages/CategoryPage'
+import { GameCompletePage } from './pages/GameCompletePage'
+import { HomePage } from './pages/HomePage'
+import { QuestionPage } from './pages/QuestionPage'
+import { getAvailableQuestions } from './utils/gameRules'
+
+type RoutePath = '/' | '/game' | '/game/question' | '/game/complete'
+
+function getCurrentRoute(): RoutePath {
+  const currentPath = window.location.pathname
+
+  if (
+    currentPath === '/' ||
+    currentPath === '/game' ||
+    currentPath === '/game/question' ||
+    currentPath === '/game/complete'
+  ) {
+    return currentPath
+  }
+
+  return '/'
+}
+
+function requestFullscreen() {
+  const rootElement = document.documentElement
+
+  if (!document.fullscreenElement && rootElement.requestFullscreen) {
+    rootElement.requestFullscreen().catch(() => undefined)
+  }
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [route, setRoute] = useState<RoutePath>(() => getCurrentRoute())
+  const {
+    session,
+    startNewGame,
+    resetSession,
+    chooseQuestion,
+    startTimer,
+    pauseTimer,
+    resumeTimer,
+    completeQuestion,
+    returnToCategories,
+    gameIsComplete,
+  } = useGameSession()
+
+  const navigate = useCallback((path: RoutePath) => {
+    window.history.pushState(null, '', path)
+    setRoute(path)
+  }, [])
+
+  useEffect(() => {
+    const handlePopState = () => setRoute(getCurrentRoute())
+    window.addEventListener('popstate', handlePopState)
+
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [])
+
+  useEffect(() => {
+    if (window.location.pathname !== route) {
+      window.history.replaceState(null, '', route)
+    }
+  }, [route])
+
+  const currentCategory = useMemo(
+    () => sortedCategories.find((category) => category.id === session.currentCategoryId) ?? null,
+    [session.currentCategoryId],
+  )
+  const currentQuestion = useMemo(
+    () => enabledQuestions.find((question) => question.id === session.currentQuestionId) ?? null,
+    [session.currentQuestionId],
+  )
+
+  const effectiveRoute = gameIsComplete ? '/game/complete' : route
+
+  useEffect(() => {
+    if (gameIsComplete && window.location.pathname !== '/game/complete') {
+      window.history.replaceState(null, '', '/game/complete')
+    }
+  }, [gameIsComplete])
+
+  const handleNewGameFromHome = () => {
+    requestFullscreen()
+    startNewGame()
+    navigate('/game')
+  }
+
+  const handleResetInGame = () => {
+    resetSession()
+    navigate('/game')
+  }
+
+  const handleSelectCategory = (categoryId: string) => {
+    chooseQuestion(categoryId)
+    navigate('/game/question')
+  }
+
+  const handleCompleteQuestion = () => {
+    completeQuestion()
+    navigate('/game')
+  }
+
+  const handleSkipQuestion = () => {
+    if (session.currentCategoryId) {
+      const availableQuestions = getAvailableQuestions(
+        session.currentCategoryId,
+        enabledQuestions,
+        session.usedQuestionIds,
+      )
+
+      if (availableQuestions.length > 0) {
+        chooseQuestion(session.currentCategoryId)
+      } else {
+        returnToCategories()
+        navigate('/game')
+      }
+    }
+  }
+
+  const handleBackToCategories = () => {
+    returnToCategories()
+    navigate('/game')
+  }
+
+  if (effectiveRoute === '/') {
+    return <HomePage onNewGame={handleNewGameFromHome} />
+  }
+
+  if (effectiveRoute === '/game/complete') {
+    return <GameCompletePage onNewGame={handleResetInGame} />
+  }
+
+  if (effectiveRoute === '/game/question' && currentCategory && currentQuestion) {
+    return (
+      <QuestionPage
+        session={session}
+        category={currentCategory}
+        question={currentQuestion}
+        onStart={startTimer}
+        onPause={pauseTimer}
+        onResume={resumeTimer}
+        onComplete={handleCompleteQuestion}
+        onSkip={handleSkipQuestion}
+        onBack={handleBackToCategories}
+      />
+    )
+  }
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    <CategoryPage
+      categories={sortedCategories}
+      usedQuestionIds={session.usedQuestionIds}
+      onSelectCategory={handleSelectCategory}
+      onReset={handleResetInGame}
+    />
   )
 }
 
