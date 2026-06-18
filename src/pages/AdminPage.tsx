@@ -1,9 +1,8 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import '../styles/AdminPage.css'
 import { gameData, validateGameData } from '../data/gameData'
 import type { Category, GameData, Question } from '../types/game'
 
-const ADMIN_PASSWORD = 'admin123'
 const DEFAULT_STYLES = [
   { color: '#d9533f', icon: '🎯' },
   { color: '#2f6fd6', icon: '🧩' },
@@ -27,10 +26,12 @@ function makeId(prefix: string, existingIds: string[]): string {
     .replace(/^-|-$/g, '') || 'item'
   let counter = 1
   let id = `${normalizedPrefix}-${String(counter).padStart(3, '0')}`
+
   while (existingIds.includes(id)) {
     counter += 1
     id = `${normalizedPrefix}-${String(counter).padStart(3, '0')}`
   }
+
   return id
 }
 
@@ -40,6 +41,7 @@ function resequenceCategories(categories: Category[]): Category[] {
 
 function resequenceQuestions(questions: Question[], categoryId: string): Question[] {
   let order = 0
+
   return questions.map((question) => {
     if (question.categoryId !== categoryId) return question
     order += 1
@@ -47,7 +49,17 @@ function resequenceQuestions(questions: Question[], categoryId: string): Questio
   })
 }
 
+async function readErrorMessage(response: Response): Promise<string> {
+  try {
+    const body = await response.json() as { error?: unknown }
+    return typeof body.error === 'string' ? body.error : '操作失敗。'
+  } catch {
+    return '操作失敗。'
+  }
+}
+
 export function AdminPage() {
+  const [checkingSession, setCheckingSession] = useState(true)
   const [authenticated, setAuthenticated] = useState(false)
   const [password, setPassword] = useState('')
   const [loginError, setLoginError] = useState('')
@@ -72,15 +84,98 @@ export function AdminPage() {
     [data.questions, selectedCategoryId],
   )
 
-  const submitLogin = (event: React.FormEvent) => {
-    event.preventDefault()
-    if (password === ADMIN_PASSWORD) {
-      setAuthenticated(true)
-      setPassword('')
-      setLoginError('')
-      return
+  const loadServerData = async (): Promise<boolean> => {
+    const response = await fetch('/api/admin/game-data', {
+      method: 'GET',
+      credentials: 'same-origin',
+      headers: { Accept: 'application/json' },
+    })
+
+    if (response.status === 401) {
+      setAuthenticated(false)
+      return false
     }
-    setLoginError('密碼不正確，請再試。')
+
+    if (!response.ok) {
+      throw new Error(await readErrorMessage(response))
+    }
+
+    const serverData = validateGameData(await response.json())
+    setData(serverData)
+    setSelectedCategoryId((current) =>
+      serverData.categories.some((category) => category.id === current)
+        ? current
+        : serverData.categories[0]?.id ?? '',
+    )
+    setAuthenticated(true)
+    return true
+  }
+
+  useEffect(() => {
+    loadServerData()
+      .catch((error) => {
+        setMessage(error instanceof Error ? error.message : '無法檢查登入狀態。')
+        setAuthenticated(false)
+      })
+      .finally(() => setCheckingSession(false))
+  }, [])
+
+  const submitLogin = async (event: React.FormEvent) => {
+    event.preventDefault()
+    setLoginError('')
+
+    try {
+      const response = await fetch('/api/admin/login', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      })
+
+      if (!response.ok) {
+        setLoginError(await readErrorMessage(response))
+        return
+      }
+
+      setPassword('')
+      await loadServerData()
+    } catch (error) {
+      setLoginError(error instanceof Error ? error.message : '登入失敗。')
+    }
+  }
+
+  const logout = async () => {
+    try {
+      await fetch('/api/admin/logout', {
+        method: 'POST',
+        credentials: 'same-origin',
+      })
+    } finally {
+      setAuthenticated(false)
+      setPassword('')
+      setMessage('')
+    }
+  }
+
+  const publish = async () => {
+    try {
+      validateGameData(data)
+      const response = await fetch('/api/admin/publish', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        setMessage(await readErrorMessage(response))
+        return
+      }
+
+      setMessage('已發布。')
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : '發布失敗。')
+    }
   }
 
   const updateCategoryName = (categoryId: string, name: string) => {
@@ -114,7 +209,10 @@ export function AdminPage() {
       setMessage('分類內仍有題目，不能刪除。')
       return
     }
-    const remaining = resequenceCategories(data.categories.filter((category) => category.id !== categoryId))
+
+    const remaining = resequenceCategories(
+      data.categories.filter((category) => category.id !== categoryId),
+    )
     setData((current) => ({ ...current, categories: remaining }))
     if (selectedCategoryId === categoryId) setSelectedCategoryId(remaining[0]?.id ?? '')
     setMessage('')
@@ -138,6 +236,7 @@ export function AdminPage() {
       (question) => question.categoryId === selectedCategoryId && question.text.trim() === cleanText,
     )
     if (duplicate) return false
+
     const id = makeId(selectedCategoryId, data.questions.map((question) => question.id))
     const question: Question = {
       id,
@@ -177,8 +276,13 @@ export function AdminPage() {
     const to = ordered.findIndex((item) => item.id === targetId)
     const [moved] = ordered.splice(from, 1)
     ordered.splice(to, 0, moved)
-    const otherQuestions = data.questions.filter((question) => question.categoryId !== selectedCategoryId)
-    const resequenced = ordered.map((question, index) => ({ ...question, sortOrder: index + 1 }))
+    const otherQuestions = data.questions.filter(
+      (question) => question.categoryId !== selectedCategoryId,
+    )
+    const resequenced = ordered.map((question, index) => ({
+      ...question,
+      sortOrder: index + 1,
+    }))
     setData((current) => ({ ...current, questions: [...otherQuestions, ...resequenced] }))
     setDraggedQuestionId(null)
   }
@@ -191,13 +295,15 @@ export function AdminPage() {
         .map((question) => question.text.trim()),
     )
     const uniqueLines = [...new Set(lines)].filter((line) => !existing.has(line))
+
     if (uniqueLines.length === 0) {
       setMessage('沒有可新增的題目。')
       return
     }
+
     const existingIds = data.questions.map((question) => question.id)
     const additions = uniqueLines.map((text, index) => {
-      const id = makeId(`${selectedCategoryId}-${Date.now()}-${index + 1}`, [...existingIds])
+      const id = makeId(`${selectedCategoryId}-${Date.now()}-${index + 1}`, existingIds)
       existingIds.push(id)
       return {
         id,
@@ -221,13 +327,24 @@ export function AdminPage() {
     }
   }
 
+  if (checkingSession) {
+    return (
+      <main className="admin-login-shell">
+        <div className="admin-login-card">
+          <p className="admin-eyebrow">Preteen Game</p>
+          <h1>正在檢查登入狀態</h1>
+        </div>
+      </main>
+    )
+  }
+
   if (!authenticated) {
     return (
       <main className="admin-login-shell">
         <form className="admin-login-card" onSubmit={submitLogin}>
           <p className="admin-eyebrow">Preteen Game</p>
           <h1>管理後台</h1>
-          <p>Phase 2 本地示範登入。資料只保存在目前頁面記憶體。</p>
+          <p>請輸入管理密碼。</p>
           <label htmlFor="admin-password">管理密碼</label>
           <input
             id="admin-password"
@@ -238,7 +355,6 @@ export function AdminPage() {
           />
           {loginError && <p className="admin-error">{loginError}</p>}
           <button type="submit">登入</button>
-          <small>開發密碼：admin123</small>
         </form>
       </main>
     )
@@ -250,12 +366,13 @@ export function AdminPage() {
         <div>
           <p className="admin-eyebrow">Preteen Game</p>
           <h1>題庫管理</h1>
-          <p>本頁只修改本地 React state，重新整理後會還原。</p>
+          <p>Phase 3 已使用 server-side session；發布仍留待 Phase 4。</p>
         </div>
         <div className="admin-header-actions">
+          <button onClick={publish}>發布</button>
           <button className="secondary" onClick={validate}>驗證資料</button>
-          <button className="secondary" onClick={() => setData(cloneInitialData())}>還原題庫</button>
-          <button className="secondary" onClick={() => setAuthenticated(false)}>登出</button>
+          <button className="secondary" onClick={() => void loadServerData()}>重新載入</button>
+          <button className="secondary" onClick={() => void logout()}>登出</button>
         </div>
       </header>
 
@@ -286,7 +403,9 @@ export function AdminPage() {
                 <button className="category-select" onClick={() => setSelectedCategoryId(category.id)}>
                   <span>{category.icon}</span>
                   <span>{category.name}</span>
-                  <small>{data.questions.filter((question) => question.categoryId === category.id).length}</small>
+                  <small>
+                    {data.questions.filter((question) => question.categoryId === category.id).length}
+                  </small>
                 </button>
                 <button className="danger-link" onClick={() => deleteCategory(category.id)}>刪除</button>
               </div>
@@ -306,7 +425,12 @@ export function AdminPage() {
                     onChange={(event) => updateCategoryName(selectedCategory.id, event.target.value)}
                   />
                 </div>
-                <span className="category-swatch" style={{ background: selectedCategory.color }}>{selectedCategory.icon}</span>
+                <span
+                  className="category-swatch"
+                  style={{ background: selectedCategory.color }}
+                >
+                  {selectedCategory.icon}
+                </span>
               </div>
 
               <div className="admin-card">
@@ -356,7 +480,9 @@ export function AdminPage() {
                       <button className="danger-link" onClick={() => deleteQuestion(question.id)}>刪除</button>
                     </div>
                   ))}
-                  {selectedQuestions.length === 0 && <p className="admin-empty">此分類暫時沒有題目。</p>}
+                  {selectedQuestions.length === 0 && (
+                    <p className="admin-empty">此分類暫時沒有題目。</p>
+                  )}
                 </div>
               </div>
             </>
