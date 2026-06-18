@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { CSSProperties } from 'react'
 import { CategoryCard } from '../components/CategoryCard'
 import { ResetGameButton } from '../components/ResetGameButton'
 import { enabledQuestions } from '../data/questions'
@@ -38,9 +37,6 @@ export function CategoryPage({
   const hasAnyQuestion = categories.some((category) =>
     enabledQuestions.some((question) => question.categoryId === category.id),
   )
-
-  const selectedRandomCategory =
-    availableCategories.find((category) => category.id === selectedRandomCategoryId) ?? null
 
   const clearRollTimers = () => {
     timersRef.current.forEach((timerId) => window.clearTimeout(timerId))
@@ -102,27 +98,9 @@ export function CategoryPage({
         >
           {isRolling ? '抽緊分類...' : '開新局'}
         </button>
-        {selectedRandomCategory ? (
-          <div className="random-result" aria-live="polite">
-            <span>今局分類：{selectedRandomCategory.name}</span>
-            <div className="random-result__actions">
-              <button
-                type="button"
-                className="primary-button category-tone"
-                style={{ '--category-color': selectedRandomCategory.color } as CSSProperties}
-                onClick={() => onSelectCategory(selectedRandomCategory.id)}
-              >
-                進入這個分類
-              </button>
-              <button type="button" className="secondary-button" onClick={handleRandomCategory}>
-                再抽一次
-              </button>
-            </div>
-          </div>
-        ) : null}
       </header>
       {!hasAnyQuestion ? <p className="empty-message">暫時沒有可用題目。</p> : null}
-      <div className="category-grid">
+      <div className="category-grid" aria-live="polite">
         {categories.map((category) => {
           const disabled = isCategoryComplete(category.id, enabledQuestions, usedQuestionIds)
           const isRandomActive = rollingCategoryId === category.id
