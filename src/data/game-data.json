@@ -34,58 +34,9 @@
       "icon": "🤝",
       "color": "#b97800",
       "sortOrder": 5
-    },
-    {
-      "id": "item-001",
-      "name": "猜猜畫畫",
-      "icon": "🎯",
-      "color": "#d9533f",
-      "sortOrder": 6
     }
   ],
   "questions": [
-    {
-      "id": "action-001",
-      "categoryId": "action",
-      "text": "扮一隻正在追自己尾巴的狗",
-      "sortOrder": 1,
-      "enabled": true
-    },
-    {
-      "id": "action-002",
-      "categoryId": "action",
-      "text": "扮一個剛剛跳到積木上的人",
-      "sortOrder": 2,
-      "enabled": true
-    },
-    {
-      "id": "action-003",
-      "categoryId": "action",
-      "text": "不出聲扮演正在打籃球",
-      "sortOrder": 3,
-      "enabled": true
-    },
-    {
-      "id": "action-004",
-      "categoryId": "action",
-      "text": "扮一個很怕冷的人",
-      "sortOrder": 4,
-      "enabled": true
-    },
-    {
-      "id": "action-005",
-      "categoryId": "action",
-      "text": "扮演超級英雄降落地面",
-      "sortOrder": 5,
-      "enabled": true
-    },
-    {
-      "id": "action-006",
-      "categoryId": "action",
-      "text": "用動作表演正在乘坐過山車",
-      "sortOrder": 6,
-      "enabled": true
-    },
     {
       "id": "english-001",
       "categoryId": "english",
@@ -252,6 +203,76 @@
       "categoryId": "teamwork",
       "text": "二人一起擺出一個超級英雄團隊姿勢",
       "sortOrder": 6,
+      "enabled": true
+    },
+    {
+      "id": "action-1781767671247-1-001",
+      "categoryId": "action",
+      "text": "追唔到巴士",
+      "sortOrder": 1,
+      "enabled": true
+    },
+    {
+      "id": "action-1781767671247-2-001",
+      "categoryId": "action",
+      "text": "踩到狗屎",
+      "sortOrder": 2,
+      "enabled": true
+    },
+    {
+      "id": "action-1781767671247-3-001",
+      "categoryId": "action",
+      "text": "笨豬跳",
+      "sortOrder": 3,
+      "enabled": true
+    },
+    {
+      "id": "action-1781767671248-4-001",
+      "categoryId": "action",
+      "text": "打飛碟",
+      "sortOrder": 4,
+      "enabled": true
+    },
+    {
+      "id": "action-1781767671248-5-001",
+      "categoryId": "action",
+      "text": "搶籃板",
+      "sortOrder": 5,
+      "enabled": true
+    },
+    {
+      "id": "action-1781767671248-6-001",
+      "categoryId": "action",
+      "text": "戴眼鏡",
+      "sortOrder": 6,
+      "enabled": true
+    },
+    {
+      "id": "action-1781767671248-7-001",
+      "categoryId": "action",
+      "text": "尷尬",
+      "sortOrder": 7,
+      "enabled": true
+    },
+    {
+      "id": "action-1781767671248-8-001",
+      "categoryId": "action",
+      "text": "打喊露",
+      "sortOrder": 8,
+      "enabled": true
+    },
+    {
+      "id": "action-1781767671248-9-001",
+      "categoryId": "action",
+      "text": "影證件相",
+      "sortOrder": 9,
+      "enabled": true
+    },
+    {
+      "id": "action-1781767671248-10-001",
+      "categoryId": "action",
+      "text": "去游水",
+      "sortOrder": 10,
       "enabled": true
     }
   ]
