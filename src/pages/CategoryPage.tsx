@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import type { CSSProperties } from 'react'
 import { CategoryCard } from '../components/CategoryCard'
 import { ResetGameButton } from '../components/ResetGameButton'
 import { enabledQuestions } from '../data/questions'
@@ -99,12 +100,14 @@ export function CategoryPage({
           </button>
           {selectedRandomCategory ? (
             <div className="random-result">
-              <span>今局分類：{selectedRandomCategory.icon} {selectedRandomCategory.name}</span>
+              <span>
+                今局分類：{selectedRandomCategory.icon} {selectedRandomCategory.name}
+              </span>
               <div className="random-result__actions">
                 <button
                   type="button"
                   className="primary-button category-tone"
-                  style={{ '--category-color': selectedRandomCategory.color } as React.CSSProperties}
+                  style={{ '--category-color': selectedRandomCategory.color } as CSSProperties}
                   onClick={() => onSelectCategory(selectedRandomCategory.id)}
                 >
                   進入這個分類
