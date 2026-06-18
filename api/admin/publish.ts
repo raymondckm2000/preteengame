@@ -1,7 +1,7 @@
-import { isAuthenticated } from '../_lib/auth'
-import { validateApiGameData } from '../_lib/gameData'
-import { allowMethods, readJsonBody, sendJson } from '../_lib/http'
-import type { ApiRequest, ApiResponse } from '../_lib/http'
+import { isAuthenticated } from '../_lib/auth.js'
+import { validateApiGameData } from '../_lib/gameData.js'
+import { allowMethods, readJsonBody, sendJson } from '../_lib/http.js'
+import type { ApiRequest, ApiResponse } from '../_lib/http.js'
 
 export default async function handler(request: ApiRequest, response: ApiResponse): Promise<void> {
   if (!allowMethods(request, response, ['POST'])) return
