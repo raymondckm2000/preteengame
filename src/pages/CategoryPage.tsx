@@ -93,42 +93,33 @@ export function CategoryPage({
     <main className="category-page" aria-label="分類主頁">
       <ResetGameButton onReset={onReset} />
       <header className="category-hero">
-        <p className="category-eyebrow">Preteen Game</p>
         <h1>今日玩邊個分類？</h1>
-        <div className="random-start-panel" aria-live="polite">
-          <button
-            type="button"
-            className="random-start-button"
-            disabled={isRolling || availableCategories.length === 0}
-            onClick={handleRandomCategory}
-          >
-            🎲 {isRolling ? '抽緊分類...' : '開新局'}
-          </button>
-          {selectedRandomCategory ? (
-            <div className="random-result">
-              <span>
-                今局分類：{selectedRandomCategory.icon} {selectedRandomCategory.name}
-              </span>
-              <div className="random-result__actions">
-                <button
-                  type="button"
-                  className="primary-button category-tone"
-                  style={{ '--category-color': selectedRandomCategory.color } as CSSProperties}
-                  onClick={() => onSelectCategory(selectedRandomCategory.id)}
-                >
-                  進入這個分類
-                </button>
-                <button type="button" className="secondary-button" onClick={handleRandomCategory}>
-                  再抽一次
-                </button>
-              </div>
+        <button
+          type="button"
+          className="random-start-button"
+          disabled={isRolling || availableCategories.length === 0}
+          onClick={handleRandomCategory}
+        >
+          {isRolling ? '抽緊分類...' : '開新局'}
+        </button>
+        {selectedRandomCategory ? (
+          <div className="random-result" aria-live="polite">
+            <span>今局分類：{selectedRandomCategory.name}</span>
+            <div className="random-result__actions">
+              <button
+                type="button"
+                className="primary-button category-tone"
+                style={{ '--category-color': selectedRandomCategory.color } as CSSProperties}
+                onClick={() => onSelectCategory(selectedRandomCategory.id)}
+              >
+                進入這個分類
+              </button>
+              <button type="button" className="secondary-button" onClick={handleRandomCategory}>
+                再抽一次
+              </button>
             </div>
-          ) : (
-            <p className="random-helper">
-              可以自己揀分類，或者按「開新局」讓系統隨機抽一個挑戰。
-            </p>
-          )}
-        </div>
+          </div>
+        ) : null}
       </header>
       {!hasAnyQuestion ? <p className="empty-message">暫時沒有可用題目。</p> : null}
       <div className="category-grid">
