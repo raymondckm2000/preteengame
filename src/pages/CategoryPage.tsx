@@ -47,7 +47,13 @@ export function CategoryPage({
     timersRef.current = []
   }
 
-  useEffect(() => clearRollTimers, [])
+  useEffect(
+    () => () => {
+      timersRef.current.forEach((timerId) => window.clearTimeout(timerId))
+      timersRef.current = []
+    },
+    [],
+  )
 
   const handleRandomCategory = () => {
     if (availableCategories.length === 0) return
@@ -64,12 +70,12 @@ export function CategoryPage({
     for (let step = 0; step <= totalSteps; step += 1) {
       const slowDownStep = Math.max(totalSteps - 6, 1)
       const baseDelay = step < slowDownStep ? 90 : 90 + (step - slowDownStep) * 70
+      const isFinalStep = step === totalSteps
+      const category = isFinalStep ? winner : availableCategories[cursor % availableCategories.length]
+
       elapsed += baseDelay
 
       const timerId = window.setTimeout(() => {
-        const isFinalStep = step === totalSteps
-        const category = isFinalStep ? winner : availableCategories[cursor % availableCategories.length]
-
         setRollingCategoryId(category.id)
 
         if (isFinalStep) {
