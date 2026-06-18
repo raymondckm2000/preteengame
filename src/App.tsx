@@ -3,19 +3,21 @@ import './App.css'
 import { sortedCategories } from './data/categories'
 import { enabledQuestions } from './data/questions'
 import { useGameSession } from './hooks/useGameSession'
+import { AdminPage } from './pages/AdminPage'
 import { CategoryPage } from './pages/CategoryPage'
 import { GameCompletePage } from './pages/GameCompletePage'
 import { HomePage } from './pages/HomePage'
 import { QuestionPage } from './pages/QuestionPage'
 import { getAvailableQuestions } from './utils/gameRules'
 
-type RoutePath = '/' | '/game' | '/game/question' | '/game/complete'
+type RoutePath = '/' | '/admin' | '/game' | '/game/question' | '/game/complete'
 
 function getCurrentRoute(): RoutePath {
   const currentPath = window.location.pathname
 
   if (
     currentPath === '/' ||
+    currentPath === '/admin' ||
     currentPath === '/game' ||
     currentPath === '/game/question' ||
     currentPath === '/game/complete'
@@ -76,13 +78,13 @@ function App() {
     [session.currentQuestionId],
   )
 
-  const effectiveRoute = gameIsComplete ? '/game/complete' : route
+  const effectiveRoute = route === '/admin' ? '/admin' : gameIsComplete ? '/game/complete' : route
 
   useEffect(() => {
-    if (gameIsComplete && window.location.pathname !== '/game/complete') {
+    if (route !== '/admin' && gameIsComplete && window.location.pathname !== '/game/complete') {
       window.history.replaceState(null, '', '/game/complete')
     }
-  }, [gameIsComplete])
+  }, [gameIsComplete, route])
 
   const handleNewGameFromHome = () => {
     requestFullscreen()
@@ -125,6 +127,10 @@ function App() {
   const handleBackToCategories = () => {
     returnToCategories()
     navigate('/game')
+  }
+
+  if (effectiveRoute === '/admin') {
+    return <AdminPage />
   }
 
   if (effectiveRoute === '/') {
