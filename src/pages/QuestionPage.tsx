@@ -16,15 +16,16 @@ interface QuestionPageProps {
   onBack: () => void
 }
 
-type AudioContextConstructor = new () => AudioContext
+type BrowserAudioContextConstructor = new () => AudioContext
 
-type WindowWithWebAudio = Window & {
-  webkitAudioContext?: AudioContextConstructor
+type GlobalWithWebAudio = typeof globalThis & {
+  AudioContext?: BrowserAudioContextConstructor
+  webkitAudioContext?: BrowserAudioContextConstructor
 }
 
 function playCountdownBeep(remainingSeconds: number) {
-  const browserWindow = window as WindowWithWebAudio
-  const AudioContextConstructor = browserWindow.AudioContext ?? browserWindow.webkitAudioContext
+  const audioGlobal = globalThis as GlobalWithWebAudio
+  const AudioContextConstructor = audioGlobal.AudioContext ?? audioGlobal.webkitAudioContext
 
   if (!AudioContextConstructor) return
 
