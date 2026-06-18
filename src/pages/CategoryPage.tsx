@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { CategoryCard } from '../components/CategoryCard'
 import { ResetGameButton } from '../components/ResetGameButton'
 import { enabledQuestions } from '../data/questions'
@@ -17,24 +18,123 @@ export function CategoryPage({
   onSelectCategory,
   onReset,
 }: CategoryPageProps) {
+  const [rollingCategoryId, setRollingCategoryId] = useState<string | null>(null)
+  const [selectedRandomCategoryId, setSelectedRandomCategoryId] = useState<string | null>(null)
+  const [isRolling, setIsRolling] = useState(false)
+  const timersRef = useRef<number[]>([])
+
+  const availableCategories = useMemo(
+    () =>
+      categories.filter((category) => {
+        const hasQuestion = enabledQuestions.some((question) => question.categoryId === category.id)
+        const completed = isCategoryComplete(category.id, enabledQuestions, usedQuestionIds)
+
+        return hasQuestion && !completed
+      }),
+    [categories, usedQuestionIds],
+  )
+
   const hasAnyQuestion = categories.some((category) =>
     enabledQuestions.some((question) => question.categoryId === category.id),
   )
 
+  const selectedRandomCategory =
+    availableCategories.find((category) => category.id === selectedRandomCategoryId) ?? null
+
+  const clearRollTimers = () => {
+    timersRef.current.forEach((timerId) => window.clearTimeout(timerId))
+    timersRef.current = []
+  }
+
+  useEffect(() => clearRollTimers, [])
+
+  const handleRandomCategory = () => {
+    if (availableCategories.length === 0) return
+
+    clearRollTimers()
+    setIsRolling(true)
+    setSelectedRandomCategoryId(null)
+
+    const winner = availableCategories[Math.floor(Math.random() * availableCategories.length)]
+    const totalSteps = Math.max(availableCategories.length * 3, 16) + Math.floor(Math.random() * 6)
+    let elapsed = 0
+    let cursor = Math.floor(Math.random() * availableCategories.length)
+
+    for (let step = 0; step <= totalSteps; step += 1) {
+      const slowDownStep = Math.max(totalSteps - 6, 1)
+      const baseDelay = step < slowDownStep ? 90 : 90 + (step - slowDownStep) * 70
+      elapsed += baseDelay
+
+      const timerId = window.setTimeout(() => {
+        const isFinalStep = step === totalSteps
+        const category = isFinalStep ? winner : availableCategories[cursor % availableCategories.length]
+
+        setRollingCategoryId(category.id)
+
+        if (isFinalStep) {
+          setSelectedRandomCategoryId(winner.id)
+          setIsRolling(false)
+        }
+      }, elapsed)
+
+      timersRef.current.push(timerId)
+      cursor += 1
+    }
+  }
+
   return (
     <main className="category-page" aria-label="分類主頁">
       <ResetGameButton onReset={onReset} />
-      <h1>選擇下一個挑戰</h1>
+      <header className="category-hero">
+        <p className="category-eyebrow">Preteen Game</p>
+        <h1>今日玩邊個分類？</h1>
+        <div className="random-start-panel" aria-live="polite">
+          <button
+            type="button"
+            className="random-start-button"
+            disabled={isRolling || availableCategories.length === 0}
+            onClick={handleRandomCategory}
+          >
+            🎲 {isRolling ? '抽緊分類...' : '開新局'}
+          </button>
+          {selectedRandomCategory ? (
+            <div className="random-result">
+              <span>今局分類：{selectedRandomCategory.icon} {selectedRandomCategory.name}</span>
+              <div className="random-result__actions">
+                <button
+                  type="button"
+                  className="primary-button category-tone"
+                  style={{ '--category-color': selectedRandomCategory.color } as React.CSSProperties}
+                  onClick={() => onSelectCategory(selectedRandomCategory.id)}
+                >
+                  進入這個分類
+                </button>
+                <button type="button" className="secondary-button" onClick={handleRandomCategory}>
+                  再抽一次
+                </button>
+              </div>
+            </div>
+          ) : (
+            <p className="random-helper">
+              可以自己揀分類，或者按「開新局」讓系統隨機抽一個挑戰。
+            </p>
+          )}
+        </div>
+      </header>
       {!hasAnyQuestion ? <p className="empty-message">暫時沒有可用題目。</p> : null}
       <div className="category-grid">
         {categories.map((category) => {
           const disabled = isCategoryComplete(category.id, enabledQuestions, usedQuestionIds)
+          const isRandomActive = rollingCategoryId === category.id
+          const isRandomSelected = selectedRandomCategoryId === category.id
 
           return (
             <CategoryCard
               key={category.id}
               category={category}
               disabled={disabled}
+              isRandomActive={isRandomActive}
+              isRandomSelected={isRandomSelected}
               onSelect={onSelectCategory}
             />
           )
