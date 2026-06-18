@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import './App.css'
 import './randomCategory.css'
 import { sortedCategories } from './data/categories'
@@ -11,6 +11,18 @@ import { QuestionPage } from './pages/QuestionPage'
 import { getAvailableQuestions } from './utils/gameRules'
 
 type RoutePath = '/' | '/admin' | '/game' | '/game/question' | '/game/complete'
+
+type WakeLockSentinelLike = {
+  released: boolean
+  release: () => Promise<void>
+  addEventListener: (type: 'release', listener: () => void) => void
+}
+
+type NavigatorWithWakeLock = Navigator & {
+  wakeLock?: {
+    request: (type: 'screen') => Promise<WakeLockSentinelLike>
+  }
+}
 
 function getCurrentRoute(): RoutePath {
   const currentPath = window.location.pathname
@@ -38,6 +50,7 @@ function requestFullscreen() {
 
 function App() {
   const [route, setRoute] = useState<RoutePath>(() => getCurrentRoute())
+  const wakeLockRef = useRef<WakeLockSentinelLike | null>(null)
   const {
     session,
     resetSession,
@@ -49,6 +62,33 @@ function App() {
     returnToCategories,
     gameIsComplete,
   } = useGameSession()
+
+  const requestWakeLock = useCallback(async () => {
+    const wakeLock = (navigator as NavigatorWithWakeLock).wakeLock
+
+    if (!wakeLock || document.visibilityState !== 'visible') return
+
+    try {
+      if (wakeLockRef.current && !wakeLockRef.current.released) return
+
+      const wakeLockSentinel = await wakeLock.request('screen')
+      wakeLockRef.current = wakeLockSentinel
+      wakeLockSentinel.addEventListener('release', () => {
+        if (wakeLockRef.current === wakeLockSentinel) {
+          wakeLockRef.current = null
+        }
+      })
+    } catch {
+      wakeLockRef.current = null
+    }
+  }, [])
+
+  const releaseWakeLock = useCallback(() => {
+    if (!wakeLockRef.current) return
+
+    wakeLockRef.current.release().catch(() => undefined)
+    wakeLockRef.current = null
+  }, [])
 
   const navigate = useCallback((path: RoutePath) => {
     window.history.pushState(null, '', path)
@@ -88,17 +128,34 @@ function App() {
   useEffect(() => {
     if (effectiveRoute !== '/admin') {
       requestFullscreen()
+      requestWakeLock()
+    } else {
+      releaseWakeLock()
     }
-  }, [effectiveRoute])
+  }, [effectiveRoute, releaseWakeLock, requestWakeLock])
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible' && effectiveRoute !== '/admin') {
+        requestWakeLock()
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange)
+  }, [effectiveRoute, requestWakeLock])
 
   const handleResetInGame = () => {
     requestFullscreen()
+    requestWakeLock()
     resetSession()
     navigate('/game')
   }
 
   const handleSelectCategory = (categoryId: string) => {
     requestFullscreen()
+    requestWakeLock()
     chooseQuestion(categoryId)
     navigate('/game/question')
   }
@@ -117,6 +174,7 @@ function App() {
       )
 
       if (availableQuestions.length > 0) {
+        requestWakeLock()
         chooseQuestion(session.currentCategoryId)
       } else {
         returnToCategories()
@@ -160,7 +218,10 @@ function App() {
       usedQuestionIds={session.usedQuestionIds}
       onSelectCategory={handleSelectCategory}
       onReset={handleResetInGame}
-      onFullscreen={requestFullscreen}
+      onFullscreen={() => {
+        requestFullscreen()
+        requestWakeLock()
+      }}
     />
   )
 }
