@@ -87,132 +87,6 @@
       "enabled": true
     },
     {
-      "id": "mandarin-001",
-      "categoryId": "mandarin",
-      "text": "用國語介紹自己三句",
-      "sortOrder": 1,
-      "enabled": true
-    },
-    {
-      "id": "mandarin-002",
-      "categoryId": "mandarin",
-      "text": "用國語講出五種水果",
-      "sortOrder": 2,
-      "enabled": true
-    },
-    {
-      "id": "mandarin-003",
-      "categoryId": "mandarin",
-      "text": "用國語形容今天的天氣",
-      "sortOrder": 3,
-      "enabled": true
-    },
-    {
-      "id": "mandarin-004",
-      "categoryId": "mandarin",
-      "text": "用國語講出三樣你喜歡做的事情",
-      "sortOrder": 4,
-      "enabled": true
-    },
-    {
-      "id": "mandarin-005",
-      "categoryId": "mandarin",
-      "text": "用國語說出四種動物",
-      "sortOrder": 5,
-      "enabled": true
-    },
-    {
-      "id": "mandarin-006",
-      "categoryId": "mandarin",
-      "text": "用國語分享你最喜歡的食物",
-      "sortOrder": 6,
-      "enabled": true
-    },
-    {
-      "id": "cantonese-001",
-      "categoryId": "cantonese",
-      "text": "用廣東話講一個你最近最開心的時刻",
-      "sortOrder": 1,
-      "enabled": true
-    },
-    {
-      "id": "cantonese-002",
-      "categoryId": "cantonese",
-      "text": "用三個詞語形容自己",
-      "sortOrder": 2,
-      "enabled": true
-    },
-    {
-      "id": "cantonese-003",
-      "categoryId": "cantonese",
-      "text": "講出五樣返學要帶的物品",
-      "sortOrder": 3,
-      "enabled": true
-    },
-    {
-      "id": "cantonese-004",
-      "categoryId": "cantonese",
-      "text": "分享一樣你最想學懂的技能",
-      "sortOrder": 4,
-      "enabled": true
-    },
-    {
-      "id": "cantonese-005",
-      "categoryId": "cantonese",
-      "text": "講出三樣你認為好朋友應有的特質",
-      "sortOrder": 5,
-      "enabled": true
-    },
-    {
-      "id": "cantonese-006",
-      "categoryId": "cantonese",
-      "text": "用一句說話介紹你最喜歡的興趣",
-      "sortOrder": 6,
-      "enabled": true
-    },
-    {
-      "id": "teamwork-001",
-      "categoryId": "teamwork",
-      "text": "二人背靠背坐下，再一起站起來",
-      "sortOrder": 1,
-      "enabled": true
-    },
-    {
-      "id": "teamwork-002",
-      "categoryId": "teamwork",
-      "text": "二人不用說話，合作擺出一個心形以外的圖案",
-      "sortOrder": 2,
-      "enabled": true
-    },
-    {
-      "id": "teamwork-003",
-      "categoryId": "teamwork",
-      "text": "二人輪流講數字，由 1 數到 20，不能同時開口",
-      "sortOrder": 3,
-      "enabled": true
-    },
-    {
-      "id": "teamwork-004",
-      "categoryId": "teamwork",
-      "text": "一人做動作，另一人像鏡子一樣同步模仿",
-      "sortOrder": 4,
-      "enabled": true
-    },
-    {
-      "id": "teamwork-005",
-      "categoryId": "teamwork",
-      "text": "二人只用一隻手合作把一件物件移到指定位置",
-      "sortOrder": 5,
-      "enabled": true
-    },
-    {
-      "id": "teamwork-006",
-      "categoryId": "teamwork",
-      "text": "二人一起擺出一個超級英雄團隊姿勢",
-      "sortOrder": 6,
-      "enabled": true
-    },
-    {
       "id": "action-1781767671247-1-001",
       "categoryId": "action",
       "text": "追唔到巴士",
@@ -497,6 +371,454 @@
       "categoryId": "item-001",
       "text": "狼人殺",
       "sortOrder": 31,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-1-001",
+      "categoryId": "action",
+      "text": "O晒咀",
+      "sortOrder": 11,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-2-001",
+      "categoryId": "action",
+      "text": "打機輸咗",
+      "sortOrder": 12,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-3-001",
+      "categoryId": "action",
+      "text": "考試遲到",
+      "sortOrder": 13,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-4-001",
+      "categoryId": "action",
+      "text": "手機冇電",
+      "sortOrder": 14,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-5-001",
+      "categoryId": "action",
+      "text": "食爆谷",
+      "sortOrder": 15,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-6-001",
+      "categoryId": "action",
+      "text": "玩啤牌",
+      "sortOrder": 16,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-7-001",
+      "categoryId": "action",
+      "text": "行路踢到腳趾",
+      "sortOrder": 17,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-8-001",
+      "categoryId": "action",
+      "text": "趕返工搭錯車",
+      "sortOrder": 18,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-9-001",
+      "categoryId": "action",
+      "text": "認錯人",
+      "sortOrder": 19,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-10-001",
+      "categoryId": "action",
+      "text": "入咗電梯放屁",
+      "sortOrder": 20,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-11-001",
+      "categoryId": "action",
+      "text": "開遮俾風吹翻",
+      "sortOrder": 21,
+      "enabled": true
+    },
+    {
+      "id": "action-1781775564845-12-001",
+      "categoryId": "action",
+      "text": "洗完手冇紙巾抹手",
+      "sortOrder": 22,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-1-001",
+      "categoryId": "mandarin",
+      "text": "出人頭地",
+      "sortOrder": 1,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-2-001",
+      "categoryId": "mandarin",
+      "text": "目定口呆",
+      "sortOrder": 2,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-3-001",
+      "categoryId": "mandarin",
+      "text": "赴湯蹈火",
+      "sortOrder": 3,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-4-001",
+      "categoryId": "mandarin",
+      "text": "胡思亂想",
+      "sortOrder": 4,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-5-001",
+      "categoryId": "mandarin",
+      "text": "一石二鳥",
+      "sortOrder": 5,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-6-001",
+      "categoryId": "mandarin",
+      "text": "東張西望",
+      "sortOrder": 6,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-7-001",
+      "categoryId": "mandarin",
+      "text": "手忙腳亂",
+      "sortOrder": 7,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-8-001",
+      "categoryId": "mandarin",
+      "text": "人山人海",
+      "sortOrder": 8,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-9-001",
+      "categoryId": "mandarin",
+      "text": "山窮水盡",
+      "sortOrder": 9,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-10-001",
+      "categoryId": "mandarin",
+      "text": "評頭品足",
+      "sortOrder": 10,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-11-001",
+      "categoryId": "mandarin",
+      "text": "鬼鬼祟祟",
+      "sortOrder": 11,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-12-001",
+      "categoryId": "mandarin",
+      "text": "五體投地",
+      "sortOrder": 12,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-13-001",
+      "categoryId": "mandarin",
+      "text": "含沙射影",
+      "sortOrder": 13,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-14-001",
+      "categoryId": "mandarin",
+      "text": "拖泥帶水",
+      "sortOrder": 14,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-15-001",
+      "categoryId": "mandarin",
+      "text": "口是心非",
+      "sortOrder": 15,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-1781775634990-16-001",
+      "categoryId": "mandarin",
+      "text": "喜怒哀樂",
+      "sortOrder": 16,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-1-001",
+      "categoryId": "cantonese",
+      "text": "直不甩",
+      "sortOrder": 1,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-2-001",
+      "categoryId": "cantonese",
+      "text": "金華火腿",
+      "sortOrder": 2,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-3-001",
+      "categoryId": "cantonese",
+      "text": "絆腳石",
+      "sortOrder": 3,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-4-001",
+      "categoryId": "cantonese",
+      "text": "捉字虱",
+      "sortOrder": 4,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-5-001",
+      "categoryId": "cantonese",
+      "text": "縮沙",
+      "sortOrder": 5,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-6-001",
+      "categoryId": "cantonese",
+      "text": "乞人憎",
+      "sortOrder": 6,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-7-001",
+      "categoryId": "cantonese",
+      "text": "打小人",
+      "sortOrder": 7,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-8-001",
+      "categoryId": "cantonese",
+      "text": "執輸",
+      "sortOrder": 8,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-9-001",
+      "categoryId": "cantonese",
+      "text": "鐵飯碗",
+      "sortOrder": 9,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-10-001",
+      "categoryId": "cantonese",
+      "text": "得戚",
+      "sortOrder": 10,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-11-001",
+      "categoryId": "cantonese",
+      "text": "口不對心",
+      "sortOrder": 11,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-12-001",
+      "categoryId": "cantonese",
+      "text": "落狗屎",
+      "sortOrder": 12,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-13-001",
+      "categoryId": "cantonese",
+      "text": "九唔搭八",
+      "sortOrder": 13,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-14-001",
+      "categoryId": "cantonese",
+      "text": "飲廢水",
+      "sortOrder": 14,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-15-001",
+      "categoryId": "cantonese",
+      "text": "潑冷水",
+      "sortOrder": 15,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-16-001",
+      "categoryId": "cantonese",
+      "text": "打蛇隨棍上",
+      "sortOrder": 16,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-17-001",
+      "categoryId": "cantonese",
+      "text": "條路又黑又窄",
+      "sortOrder": 17,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-18-001",
+      "categoryId": "cantonese",
+      "text": "放暑假",
+      "sortOrder": 18,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-19-001",
+      "categoryId": "cantonese",
+      "text": "指鹿為馬",
+      "sortOrder": 19,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-20-001",
+      "categoryId": "cantonese",
+      "text": "驚慌失措",
+      "sortOrder": 20,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-21-001",
+      "categoryId": "cantonese",
+      "text": "天崩地裂",
+      "sortOrder": 21,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-22-001",
+      "categoryId": "cantonese",
+      "text": "狼吞虎嚥",
+      "sortOrder": 22,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-23-001",
+      "categoryId": "cantonese",
+      "text": "手舞足蹈",
+      "sortOrder": 23,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-24-001",
+      "categoryId": "cantonese",
+      "text": "七嘴八舌",
+      "sortOrder": 24,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-25-001",
+      "categoryId": "cantonese",
+      "text": "粗心大意",
+      "sortOrder": 25,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-26-001",
+      "categoryId": "cantonese",
+      "text": "掩耳盜鈴",
+      "sortOrder": 26,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781775654052-27-001",
+      "categoryId": "cantonese",
+      "text": "恍然大悟",
+      "sortOrder": 27,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781775678229-1-001",
+      "categoryId": "teamwork",
+      "text": "玩搖搖板",
+      "sortOrder": 1,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781775678229-2-001",
+      "categoryId": "teamwork",
+      "text": "玩過山車",
+      "sortOrder": 2,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781775678229-3-001",
+      "categoryId": "teamwork",
+      "text": "照鏡",
+      "sortOrder": 3,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781775678229-4-001",
+      "categoryId": "teamwork",
+      "text": "二人三足",
+      "sortOrder": 4,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781775678229-5-001",
+      "categoryId": "teamwork",
+      "text": "打匹克球",
+      "sortOrder": 5,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781775678229-6-001",
+      "categoryId": "teamwork",
+      "text": "排隊打尖",
+      "sortOrder": 6,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781775678229-7-001",
+      "categoryId": "teamwork",
+      "text": "講秘密",
+      "sortOrder": 7,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781775716260-1-001",
+      "categoryId": "item-001",
+      "text": "慶祝生日",
+      "sortOrder": 32,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781775716260-2-001",
+      "categoryId": "item-001",
+      "text": "嬰兒",
+      "sortOrder": 33,
       "enabled": true
     }
   ]
