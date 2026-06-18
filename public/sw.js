@@ -1,4 +1,4 @@
-const CACHE_NAME = 'preteen-game-shell-v1'
+const CACHE_NAME = 'preteen-game-shell-v2'
 const APP_SHELL = ['/', '/index.html', '/favicon.svg', '/manifest.webmanifest']
 
 self.addEventListener('install', (event) => {
@@ -26,27 +26,26 @@ self.addEventListener('activate', (event) => {
 })
 
 self.addEventListener('fetch', (event) => {
-  if (event.request.method !== 'GET') {
+  const url = new URL(event.request.url)
+
+  if (event.request.method !== 'GET' || url.pathname.startsWith('/api/')) {
     return
   }
 
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse
-      }
+      if (cachedResponse) return cachedResponse
 
       return fetch(event.request)
         .then((networkResponse) => {
-          const responseClone = networkResponse.clone()
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone))
+          if (networkResponse.ok) {
+            const responseClone = networkResponse.clone()
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseClone))
+          }
           return networkResponse
         })
         .catch(() => {
-          if (event.request.mode === 'navigate') {
-            return caches.match('/')
-          }
-
+          if (event.request.mode === 'navigate') return caches.match('/')
           return Response.error()
         })
     }),
