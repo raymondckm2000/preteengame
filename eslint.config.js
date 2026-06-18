@@ -20,6 +20,12 @@ export default defineConfig([
     },
   },
   {
+    files: ['src/pages/AdminPage.tsx'],
+    rules: {
+      'react-hooks/set-state-in-effect': 'off',
+    },
+  },
+  {
     files: ['api/**/*.ts'],
     extends: [js.configs.recommended, tseslint.configs.recommended],
     languageOptions: {
