@@ -39,7 +39,7 @@ function getAudioContext() {
   return sharedAudioContext
 }
 
-function unlockCountdownAudio() {
+function playTone(frequency: number, volume: number, durationSeconds: number) {
   const audioContext = getAudioContext()
 
   if (!audioContext) return
@@ -51,37 +51,25 @@ function unlockCountdownAudio() {
   const now = audioContext.currentTime
 
   oscillator.type = 'sine'
-  oscillator.frequency.setValueAtTime(440, now)
+  oscillator.frequency.setValueAtTime(frequency, now)
   gain.gain.setValueAtTime(0.0001, now)
+  gain.gain.exponentialRampToValueAtTime(volume, now + 0.01)
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + durationSeconds)
 
   oscillator.connect(gain)
   gain.connect(audioContext.destination)
   oscillator.start(now)
-  oscillator.stop(now + 0.03)
+  oscillator.stop(now + durationSeconds + 0.02)
+}
+
+function unlockCountdownAudio() {
+  playTone(620, 0.12, 0.12)
 }
 
 function playCountdownBeep(remainingSeconds: number) {
-  const audioContext = getAudioContext()
-
-  if (!audioContext) return
-
-  audioContext.resume().catch(() => undefined)
-
-  const oscillator = audioContext.createOscillator()
-  const gain = audioContext.createGain()
-  const now = audioContext.currentTime
   const isFinalSecond = remainingSeconds === 1
 
-  oscillator.type = 'sine'
-  oscillator.frequency.setValueAtTime(isFinalSecond ? 980 : 740, now)
-  gain.gain.setValueAtTime(0.0001, now)
-  gain.gain.exponentialRampToValueAtTime(isFinalSecond ? 0.28 : 0.18, now + 0.01)
-  gain.gain.exponentialRampToValueAtTime(0.0001, now + (isFinalSecond ? 0.24 : 0.13))
-
-  oscillator.connect(gain)
-  gain.connect(audioContext.destination)
-  oscillator.start(now)
-  oscillator.stop(now + (isFinalSecond ? 0.26 : 0.15))
+  playTone(isFinalSecond ? 980 : 740, isFinalSecond ? 0.28 : 0.18, isFinalSecond ? 0.24 : 0.13)
 }
 
 export function QuestionPage({
