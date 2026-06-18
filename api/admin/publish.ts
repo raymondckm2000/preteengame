@@ -27,7 +27,7 @@ function getRequiredEnv(name: 'GITHUB_TOKEN' | 'GITHUB_OWNER' | 'GITHUB_REPO' | 
   return value
 }
 
-function getGitHubHeaders(token: string): HeadersInit {
+function getGitHubHeaders(token: string): Record<string, string> {
   return {
     Authorization: `Bearer ${token}`,
     Accept: 'application/vnd.github+json',
