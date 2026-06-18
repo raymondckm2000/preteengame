@@ -1,6 +1,6 @@
-import { clearSessionCookie } from '../_lib/auth'
-import { allowMethods, sendJson } from '../_lib/http'
-import type { ApiRequest, ApiResponse } from '../_lib/http'
+import { clearSessionCookie } from '../_lib/auth.js'
+import { allowMethods, sendJson } from '../_lib/http.js'
+import type { ApiRequest, ApiResponse } from '../_lib/http.js'
 
 export default function handler(request: ApiRequest, response: ApiResponse): void {
   if (!allowMethods(request, response, ['POST'])) return
