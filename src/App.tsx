@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import './App.css'
+import './randomCategory.css'
 import { sortedCategories } from './data/categories'
 import { enabledQuestions } from './data/questions'
 import { useGameSession } from './hooks/useGameSession'
