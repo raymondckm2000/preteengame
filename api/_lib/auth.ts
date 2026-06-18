@@ -1,5 +1,5 @@
 import { createHash, createHmac, timingSafeEqual } from 'node:crypto'
-import type { ApiRequest, ApiResponse } from './http.js'
+import type { ApiRequest, ApiResponse } from './http.ts'
 
 const COOKIE_NAME = 'preteen_admin_session'
 const SESSION_PAYLOAD = 'admin'
