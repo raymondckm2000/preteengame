@@ -38,7 +38,7 @@
     {
       "id": "item-001",
       "name": "猜猜畫畫",
-      "icon": "🎯",
+      "icon": "🖌️📒",
       "color": "#d9533f",
       "sortOrder": 6
     }
@@ -82,421 +82,302 @@
     {
       "id": "english-006",
       "categoryId": "english",
-      "text": "用英文說出你最喜歡的遊戲及原因",
+      "text": "用英文講一句鼓勵人的說話",
       "sortOrder": 6,
       "enabled": true
     },
     {
-      "id": "mandarin-001",
-      "categoryId": "mandarin",
-      "text": "用國語介紹自己三句",
-      "sortOrder": 1,
+      "id": "english-007",
+      "categoryId": "english",
+      "text": "用英文講出三個你喜歡的活動",
+      "sortOrder": 7,
       "enabled": true
     },
     {
-      "id": "mandarin-002",
-      "categoryId": "mandarin",
-      "text": "用國語講出五種水果",
-      "sortOrder": 2,
-      "enabled": true
-    },
-    {
-      "id": "mandarin-003",
-      "categoryId": "mandarin",
-      "text": "用國語形容今天的天氣",
-      "sortOrder": 3,
-      "enabled": true
-    },
-    {
-      "id": "mandarin-004",
-      "categoryId": "mandarin",
-      "text": "用國語講出三樣你喜歡做的事情",
-      "sortOrder": 4,
-      "enabled": true
-    },
-    {
-      "id": "mandarin-005",
-      "categoryId": "mandarin",
-      "text": "用國語說出四種動物",
-      "sortOrder": 5,
-      "enabled": true
-    },
-    {
-      "id": "mandarin-006",
-      "categoryId": "mandarin",
-      "text": "用國語分享你最喜歡的食物",
-      "sortOrder": 6,
+      "id": "english-008",
+      "categoryId": "english",
+      "text": "用英文講出今天日期或星期幾",
+      "sortOrder": 8,
       "enabled": true
     },
     {
       "id": "cantonese-001",
       "categoryId": "cantonese",
-      "text": "用廣東話講一個你最近最開心的時刻",
+      "text": "用廣東話解釋：咩叫做「靠得住」？",
       "sortOrder": 1,
       "enabled": true
     },
     {
       "id": "cantonese-002",
       "categoryId": "cantonese",
-      "text": "用三個詞語形容自己",
+      "text": "用廣東話講一個你最近覺得好笑的情況",
       "sortOrder": 2,
       "enabled": true
     },
     {
       "id": "cantonese-003",
       "categoryId": "cantonese",
-      "text": "講出五樣返學要帶的物品",
+      "text": "用廣東話形容一個好隊友要有咩特質",
       "sortOrder": 3,
       "enabled": true
     },
     {
       "id": "cantonese-004",
       "categoryId": "cantonese",
-      "text": "分享一樣你最想學懂的技能",
+      "text": "用廣東話講一句你平時聽到的口頭禪",
       "sortOrder": 4,
       "enabled": true
     },
     {
       "id": "cantonese-005",
       "categoryId": "cantonese",
-      "text": "講出三樣你認為好朋友應有的特質",
+      "text": "用廣東話解釋：咩叫做「唔好亂嚟」？",
       "sortOrder": 5,
       "enabled": true
     },
     {
       "id": "cantonese-006",
       "categoryId": "cantonese",
-      "text": "用一句說話介紹你最喜歡的興趣",
+      "text": "用廣東話講一個你想學好的習慣",
       "sortOrder": 6,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-007",
+      "categoryId": "cantonese",
+      "text": "用廣東話描述你心目中的好朋友",
+      "sortOrder": 7,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-008",
+      "categoryId": "cantonese",
+      "text": "用廣東話講一件你覺得需要勇氣的事",
+      "sortOrder": 8,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-001",
+      "categoryId": "mandarin",
+      "text": "用普通話介紹自己的名字和年級",
+      "sortOrder": 1,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-002",
+      "categoryId": "mandarin",
+      "text": "用普通話說出三種水果",
+      "sortOrder": 2,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-003",
+      "categoryId": "mandarin",
+      "text": "用普通話講一句感謝人的說話",
+      "sortOrder": 3,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-004",
+      "categoryId": "mandarin",
+      "text": "用普通話形容今天的天氣",
+      "sortOrder": 4,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-005",
+      "categoryId": "mandarin",
+      "text": "用普通話說出三樣學校裡的東西",
+      "sortOrder": 5,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-006",
+      "categoryId": "mandarin",
+      "text": "用普通話講一句鼓勵隊友的說話",
+      "sortOrder": 6,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-007",
+      "categoryId": "mandarin",
+      "text": "用普通話講出你喜歡的一項運動",
+      "sortOrder": 7,
+      "enabled": true
+    },
+    {
+      "id": "mandarin-008",
+      "categoryId": "mandarin",
+      "text": "用普通話問大家一條簡單問題",
+      "sortOrder": 8,
+      "enabled": true
+    },
+    {
+      "id": "action-001",
+      "categoryId": "action",
+      "text": "做出一個正在打籃球的動作",
+      "sortOrder": 1,
+      "enabled": true
+    },
+    {
+      "id": "action-002",
+      "categoryId": "action",
+      "text": "做出一個偷偷行路的動作",
+      "sortOrder": 2,
+      "enabled": true
+    },
+    {
+      "id": "action-003",
+      "categoryId": "action",
+      "text": "做出一個很驚訝的表情和動作",
+      "sortOrder": 3,
+      "enabled": true
+    },
+    {
+      "id": "action-004",
+      "categoryId": "action",
+      "text": "做出一個正在刷牙的動作",
+      "sortOrder": 4,
+      "enabled": true
+    },
+    {
+      "id": "action-005",
+      "categoryId": "action",
+      "text": "做出一個很累想睡覺的動作",
+      "sortOrder": 5,
+      "enabled": true
+    },
+    {
+      "id": "action-006",
+      "categoryId": "action",
+      "text": "做出一個正在開門的動作",
+      "sortOrder": 6,
+      "enabled": true
+    },
+    {
+      "id": "action-007",
+      "categoryId": "action",
+      "text": "做出一個正在打機的動作",
+      "sortOrder": 7,
+      "enabled": true
+    },
+    {
+      "id": "action-008",
+      "categoryId": "action",
+      "text": "做出一個正在找東西的動作",
+      "sortOrder": 8,
       "enabled": true
     },
     {
       "id": "teamwork-001",
       "categoryId": "teamwork",
-      "text": "二人背靠背坐下，再一起站起來",
+      "text": "二人合作，用身體砌出一個英文字母",
       "sortOrder": 1,
       "enabled": true
     },
     {
       "id": "teamwork-002",
       "categoryId": "teamwork",
-      "text": "二人不用說話，合作擺出一個心形以外的圖案",
+      "text": "二人合作，講出三個好隊友的特質",
       "sortOrder": 2,
       "enabled": true
     },
     {
       "id": "teamwork-003",
       "categoryId": "teamwork",
-      "text": "二人輪流講數字，由 1 數到 20，不能同時開口",
+      "text": "二人合作，一人做動作，一人解釋是什麼",
       "sortOrder": 3,
       "enabled": true
     },
     {
       "id": "teamwork-004",
       "categoryId": "teamwork",
-      "text": "一人做動作，另一人像鏡子一樣同步模仿",
+      "text": "二人合作，輪流講出一個大家都喜歡的東西",
       "sortOrder": 4,
       "enabled": true
     },
     {
       "id": "teamwork-005",
       "categoryId": "teamwork",
-      "text": "二人只用一隻手合作把一件物件移到指定位置",
+      "text": "二人合作，用十秒想出一個隊名",
       "sortOrder": 5,
       "enabled": true
     },
     {
       "id": "teamwork-006",
       "categoryId": "teamwork",
-      "text": "二人一起擺出一個超級英雄團隊姿勢",
+      "text": "二人合作，一人講一句鼓勵說話給另一人",
       "sortOrder": 6,
       "enabled": true
     },
     {
-      "id": "action-1781767671247-1-001",
-      "categoryId": "action",
-      "text": "追唔到巴士",
-      "sortOrder": 1,
-      "enabled": true
-    },
-    {
-      "id": "action-1781767671247-2-001",
-      "categoryId": "action",
-      "text": "踩到狗屎",
-      "sortOrder": 2,
-      "enabled": true
-    },
-    {
-      "id": "action-1781767671247-3-001",
-      "categoryId": "action",
-      "text": "笨豬跳",
-      "sortOrder": 3,
-      "enabled": true
-    },
-    {
-      "id": "action-1781767671248-4-001",
-      "categoryId": "action",
-      "text": "打飛碟",
-      "sortOrder": 4,
-      "enabled": true
-    },
-    {
-      "id": "action-1781767671248-5-001",
-      "categoryId": "action",
-      "text": "搶籃板",
-      "sortOrder": 5,
-      "enabled": true
-    },
-    {
-      "id": "action-1781767671248-6-001",
-      "categoryId": "action",
-      "text": "戴眼鏡",
-      "sortOrder": 6,
-      "enabled": true
-    },
-    {
-      "id": "action-1781767671248-7-001",
-      "categoryId": "action",
-      "text": "尷尬",
+      "id": "teamwork-007",
+      "categoryId": "teamwork",
+      "text": "二人合作，用動作表達『合作』兩個字",
       "sortOrder": 7,
       "enabled": true
     },
     {
-      "id": "action-1781767671248-8-001",
-      "categoryId": "action",
-      "text": "打喊露",
+      "id": "teamwork-008",
+      "categoryId": "teamwork",
+      "text": "二人合作，講出一個大家都應該避免的壞隊友行為",
       "sortOrder": 8,
       "enabled": true
     },
     {
-      "id": "action-1781767671248-9-001",
-      "categoryId": "action",
-      "text": "影證件相",
-      "sortOrder": 9,
-      "enabled": true
-    },
-    {
-      "id": "action-1781767671248-10-001",
-      "categoryId": "action",
-      "text": "去游水",
-      "sortOrder": 10,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-1-001",
+      "id": "item-001-q1",
       "categoryId": "item-001",
-      "text": "公仔麵",
+      "text": "畫出：太陽",
       "sortOrder": 1,
       "enabled": true
     },
     {
-      "id": "item-001-1781768221585-2-001",
+      "id": "item-001-q2",
       "categoryId": "item-001",
-      "text": "鬼畫符",
+      "text": "畫出：足球",
       "sortOrder": 2,
       "enabled": true
     },
     {
-      "id": "item-001-1781768221585-3-001",
+      "id": "item-001-q3",
       "categoryId": "item-001",
-      "text": "雞蛋仔",
+      "text": "畫出：眼鏡",
       "sortOrder": 3,
       "enabled": true
     },
     {
-      "id": "item-001-1781768221585-4-001",
+      "id": "item-001-q4",
       "categoryId": "item-001",
-      "text": "恭喜發財",
+      "text": "畫出：雨傘",
       "sortOrder": 4,
       "enabled": true
     },
     {
-      "id": "item-001-1781768221585-5-001",
+      "id": "item-001-q5",
       "categoryId": "item-001",
-      "text": "中秋節",
+      "text": "畫出：巴士",
       "sortOrder": 5,
       "enabled": true
     },
     {
-      "id": "item-001-1781768221585-6-001",
+      "id": "item-001-q6",
       "categoryId": "item-001",
-      "text": "超強颱風",
+      "text": "畫出：魚",
       "sortOrder": 6,
       "enabled": true
     },
     {
-      "id": "item-001-1781768221585-7-001",
+      "id": "item-001-q7",
       "categoryId": "item-001",
-      "text": "打邊爐",
+      "text": "畫出：書包",
       "sortOrder": 7,
       "enabled": true
     },
     {
-      "id": "item-001-1781768221585-8-001",
+      "id": "item-001-q8",
       "categoryId": "item-001",
-      "text": "咖喱魚蛋",
+      "text": "畫出：飛機",
       "sortOrder": 8,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-9-001",
-      "categoryId": "item-001",
-      "text": "手撕雞",
-      "sortOrder": 9,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-10-001",
-      "categoryId": "item-001",
-      "text": "叉燒炒蛋飯",
-      "sortOrder": 10,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-11-001",
-      "categoryId": "item-001",
-      "text": "日本拉麵",
-      "sortOrder": 11,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-12-001",
-      "categoryId": "item-001",
-      "text": "魚肉燒賣",
-      "sortOrder": 12,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-13-001",
-      "categoryId": "item-001",
-      "text": "新年逗利是",
-      "sortOrder": 13,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-14-001",
-      "categoryId": "item-001",
-      "text": "麥當勞",
-      "sortOrder": 14,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-15-001",
-      "categoryId": "item-001",
-      "text": "蜘蛛俠",
-      "sortOrder": 15,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-16-001",
-      "categoryId": "item-001",
-      "text": "多啦A夢",
-      "sortOrder": 16,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-17-001",
-      "categoryId": "item-001",
-      "text": "哈利波特",
-      "sortOrder": 17,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-18-001",
-      "categoryId": "item-001",
-      "text": "夾公仔機",
-      "sortOrder": 18,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-19-001",
-      "categoryId": "item-001",
-      "text": "反斗奇兵",
-      "sortOrder": 19,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-20-001",
-      "categoryId": "item-001",
-      "text": "飯團",
-      "sortOrder": 20,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-21-001",
-      "categoryId": "item-001",
-      "text": "手機冇電",
-      "sortOrder": 21,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-22-001",
-      "categoryId": "item-001",
-      "text": "火山爆發",
-      "sortOrder": 22,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-23-001",
-      "categoryId": "item-001",
-      "text": "眼中釘",
-      "sortOrder": 23,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-24-001",
-      "categoryId": "item-001",
-      "text": "麥旋風",
-      "sortOrder": 24,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-25-001",
-      "categoryId": "item-001",
-      "text": "元気寿司",
-      "sortOrder": 25,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-26-001",
-      "categoryId": "item-001",
-      "text": "食爆谷",
-      "sortOrder": 26,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-27-001",
-      "categoryId": "item-001",
-      "text": "條路又黑又窄",
-      "sortOrder": 27,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-28-001",
-      "categoryId": "item-001",
-      "text": "打機輸咗",
-      "sortOrder": 28,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-29-001",
-      "categoryId": "item-001",
-      "text": "考試遲到",
-      "sortOrder": 29,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-30-001",
-      "categoryId": "item-001",
-      "text": "放暑假",
-      "sortOrder": 30,
-      "enabled": true
-    },
-    {
-      "id": "item-001-1781768221585-31-001",
-      "categoryId": "item-001",
-      "text": "狼人殺",
-      "sortOrder": 31,
       "enabled": true
     }
   ]
