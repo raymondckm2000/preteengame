@@ -85,6 +85,12 @@ function App() {
     }
   }, [gameIsComplete, route])
 
+  useEffect(() => {
+    if (effectiveRoute !== '/admin') {
+      requestFullscreen()
+    }
+  }, [effectiveRoute])
+
   const handleResetInGame = () => {
     requestFullscreen()
     resetSession()
@@ -154,6 +160,7 @@ function App() {
       usedQuestionIds={session.usedQuestionIds}
       onSelectCategory={handleSelectCategory}
       onReset={handleResetInGame}
+      onFullscreen={requestFullscreen}
     />
   )
 }
