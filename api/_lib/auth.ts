@@ -1,5 +1,5 @@
 import { createHash, createHmac, timingSafeEqual } from 'node:crypto'
-import type { ApiRequest, ApiResponse } from './http'
+import type { ApiRequest, ApiResponse } from './http.js'
 
 const COOKIE_NAME = 'preteen_admin_session'
 const SESSION_PAYLOAD = 'admin'
@@ -67,7 +67,7 @@ export function setSessionCookie(response: ApiResponse): void {
   const secure = process.env.VERCEL ? '; Secure' : ''
   response.setHeader(
     'Set-Cookie',
-    `${COOKIE_NAME}=${encodeURIComponent(createSessionToken())}; Path=/; HttpOnly; SameSite=Strict${secure}`,
+    `${COOKIE_NAME}=${encodeURIComponent(createSessionToken())}; Path=/; HttpOnly; SameSite=Lax${secure}`,
   )
 }
 
@@ -75,6 +75,6 @@ export function clearSessionCookie(response: ApiResponse): void {
   const secure = process.env.VERCEL ? '; Secure' : ''
   response.setHeader(
     'Set-Cookie',
-    `${COOKIE_NAME}=; Path=/; HttpOnly; SameSite=Strict; Max-Age=0${secure}`,
+    `${COOKIE_NAME}=; Path=/; HttpOnly; SameSite=Lax; Max-Age=0${secure}`,
   )
 }
