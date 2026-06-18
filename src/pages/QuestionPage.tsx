@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { CountdownRing } from '../components/CountdownRing'
 import { GameControls } from '../components/GameControls'
 import { QuestionText } from '../components/QuestionText'
@@ -15,6 +16,41 @@ interface QuestionPageProps {
   onBack: () => void
 }
 
+type BrowserAudioContextConstructor = new () => AudioContext
+
+type GlobalWithWebAudio = typeof globalThis & {
+  AudioContext?: BrowserAudioContextConstructor
+  webkitAudioContext?: BrowserAudioContextConstructor
+}
+
+function playCountdownBeep(remainingSeconds: number) {
+  const audioGlobal = globalThis as GlobalWithWebAudio
+  const AudioContextConstructor = audioGlobal.AudioContext ?? audioGlobal.webkitAudioContext
+
+  if (!AudioContextConstructor) return
+
+  const audioContext = new AudioContextConstructor()
+  const oscillator = audioContext.createOscillator()
+  const gain = audioContext.createGain()
+  const now = audioContext.currentTime
+  const isFinalSecond = remainingSeconds === 1
+
+  oscillator.type = 'sine'
+  oscillator.frequency.setValueAtTime(isFinalSecond ? 980 : 740, now)
+  gain.gain.setValueAtTime(0.0001, now)
+  gain.gain.exponentialRampToValueAtTime(isFinalSecond ? 0.24 : 0.16, now + 0.01)
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + (isFinalSecond ? 0.22 : 0.12))
+
+  oscillator.connect(gain)
+  gain.connect(audioContext.destination)
+  oscillator.start(now)
+  oscillator.stop(now + (isFinalSecond ? 0.24 : 0.14))
+
+  window.setTimeout(() => {
+    audioContext.close().catch(() => undefined)
+  }, 320)
+}
+
 export function QuestionPage({
   session,
   category,
@@ -26,6 +62,22 @@ export function QuestionPage({
   onSkip,
   onBack,
 }: QuestionPageProps) {
+  const lastBeepSecondRef = useRef<number | null>(null)
+
+  useEffect(() => {
+    if (session.status !== 'running') {
+      lastBeepSecondRef.current = null
+      return
+    }
+
+    if (session.remainingSeconds > 0 && session.remainingSeconds <= 10) {
+      if (lastBeepSecondRef.current !== session.remainingSeconds) {
+        playCountdownBeep(session.remainingSeconds)
+        lastBeepSecondRef.current = session.remainingSeconds
+      }
+    }
+  }, [session.remainingSeconds, session.status])
+
   return (
     <main className="question-page" aria-label="題目頁">
       <section className="question-stage">

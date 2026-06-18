@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import './App.css'
+import './randomCategory.css'
 import { sortedCategories } from './data/categories'
 import { enabledQuestions } from './data/questions'
 import { useGameSession } from './hooks/useGameSession'
 import { AdminPage } from './pages/AdminPage'
 import { CategoryPage } from './pages/CategoryPage'
 import { GameCompletePage } from './pages/GameCompletePage'
-import { HomePage } from './pages/HomePage'
 import { QuestionPage } from './pages/QuestionPage'
 import { getAvailableQuestions } from './utils/gameRules'
 
@@ -40,7 +40,6 @@ function App() {
   const [route, setRoute] = useState<RoutePath>(() => getCurrentRoute())
   const {
     session,
-    startNewGame,
     resetSession,
     chooseQuestion,
     startTimer,
@@ -86,18 +85,20 @@ function App() {
     }
   }, [gameIsComplete, route])
 
-  const handleNewGameFromHome = () => {
-    requestFullscreen()
-    startNewGame()
-    navigate('/game')
-  }
+  useEffect(() => {
+    if (effectiveRoute !== '/admin') {
+      requestFullscreen()
+    }
+  }, [effectiveRoute])
 
   const handleResetInGame = () => {
+    requestFullscreen()
     resetSession()
     navigate('/game')
   }
 
   const handleSelectCategory = (categoryId: string) => {
+    requestFullscreen()
     chooseQuestion(categoryId)
     navigate('/game/question')
   }
@@ -133,10 +134,6 @@ function App() {
     return <AdminPage />
   }
 
-  if (effectiveRoute === '/') {
-    return <HomePage onNewGame={handleNewGameFromHome} />
-  }
-
   if (effectiveRoute === '/game/complete') {
     return <GameCompletePage onNewGame={handleResetInGame} />
   }
@@ -163,6 +160,7 @@ function App() {
       usedQuestionIds={session.usedQuestionIds}
       onSelectCategory={handleSelectCategory}
       onReset={handleResetInGame}
+      onFullscreen={requestFullscreen}
     />
   )
 }
