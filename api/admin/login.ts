@@ -1,6 +1,6 @@
-import { setSessionCookie, verifyAdminPassword } from '../_lib/auth'
-import { allowMethods, getStringField, readJsonBody, sendJson } from '../_lib/http'
-import type { ApiRequest, ApiResponse } from '../_lib/http'
+import { setSessionCookie, verifyAdminPassword } from '../_lib/auth.js'
+import { allowMethods, getStringField, readJsonBody, sendJson } from '../_lib/http.js'
+import type { ApiRequest, ApiResponse } from '../_lib/http.js'
 
 export default async function handler(request: ApiRequest, response: ApiResponse): Promise<void> {
   if (!allowMethods(request, response, ['POST'])) return
