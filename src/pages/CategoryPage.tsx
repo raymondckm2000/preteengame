@@ -10,6 +10,7 @@ interface CategoryPageProps {
   usedQuestionIds: string[]
   onSelectCategory: (categoryId: string) => void
   onReset: () => void
+  onFullscreen: () => void
 }
 
 export function CategoryPage({
@@ -17,6 +18,7 @@ export function CategoryPage({
   usedQuestionIds,
   onSelectCategory,
   onReset,
+  onFullscreen,
 }: CategoryPageProps) {
   const [rollingCategoryId, setRollingCategoryId] = useState<string | null>(null)
   const [selectedRandomCategoryId, setSelectedRandomCategoryId] = useState<string | null>(null)
@@ -87,9 +89,17 @@ export function CategoryPage({
 
   return (
     <main className="category-page" aria-label="分類主頁">
+      <button
+        type="button"
+        className="fullscreen-button"
+        aria-label="開啟全螢幕"
+        onClick={onFullscreen}
+      >
+        全螢幕
+      </button>
       <ResetGameButton onReset={onReset} />
       <header className="category-hero">
-        <h1>今日玩邊個分類？</h1>
+        <h1>挑戰以下分類</h1>
         <button
           type="button"
           className="random-start-button"
