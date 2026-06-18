@@ -23,13 +23,50 @@ type GlobalWithWebAudio = typeof globalThis & {
   webkitAudioContext?: BrowserAudioContextConstructor
 }
 
-function playCountdownBeep(remainingSeconds: number) {
+let sharedAudioContext: AudioContext | null = null
+
+function getAudioContext() {
+  if (sharedAudioContext && sharedAudioContext.state !== 'closed') {
+    return sharedAudioContext
+  }
+
   const audioGlobal = globalThis as GlobalWithWebAudio
   const AudioContextConstructor = audioGlobal.AudioContext ?? audioGlobal.webkitAudioContext
 
-  if (!AudioContextConstructor) return
+  if (!AudioContextConstructor) return null
 
-  const audioContext = new AudioContextConstructor()
+  sharedAudioContext = new AudioContextConstructor()
+  return sharedAudioContext
+}
+
+function unlockCountdownAudio() {
+  const audioContext = getAudioContext()
+
+  if (!audioContext) return
+
+  audioContext.resume().catch(() => undefined)
+
+  const oscillator = audioContext.createOscillator()
+  const gain = audioContext.createGain()
+  const now = audioContext.currentTime
+
+  oscillator.type = 'sine'
+  oscillator.frequency.setValueAtTime(440, now)
+  gain.gain.setValueAtTime(0.0001, now)
+
+  oscillator.connect(gain)
+  gain.connect(audioContext.destination)
+  oscillator.start(now)
+  oscillator.stop(now + 0.03)
+}
+
+function playCountdownBeep(remainingSeconds: number) {
+  const audioContext = getAudioContext()
+
+  if (!audioContext) return
+
+  audioContext.resume().catch(() => undefined)
+
   const oscillator = audioContext.createOscillator()
   const gain = audioContext.createGain()
   const now = audioContext.currentTime
@@ -38,17 +75,13 @@ function playCountdownBeep(remainingSeconds: number) {
   oscillator.type = 'sine'
   oscillator.frequency.setValueAtTime(isFinalSecond ? 980 : 740, now)
   gain.gain.setValueAtTime(0.0001, now)
-  gain.gain.exponentialRampToValueAtTime(isFinalSecond ? 0.24 : 0.16, now + 0.01)
-  gain.gain.exponentialRampToValueAtTime(0.0001, now + (isFinalSecond ? 0.22 : 0.12))
+  gain.gain.exponentialRampToValueAtTime(isFinalSecond ? 0.28 : 0.18, now + 0.01)
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + (isFinalSecond ? 0.24 : 0.13))
 
   oscillator.connect(gain)
   gain.connect(audioContext.destination)
   oscillator.start(now)
-  oscillator.stop(now + (isFinalSecond ? 0.24 : 0.14))
-
-  window.setTimeout(() => {
-    audioContext.close().catch(() => undefined)
-  }, 320)
+  oscillator.stop(now + (isFinalSecond ? 0.26 : 0.15))
 }
 
 export function QuestionPage({
@@ -63,6 +96,16 @@ export function QuestionPage({
   onBack,
 }: QuestionPageProps) {
   const lastBeepSecondRef = useRef<number | null>(null)
+
+  const handleStart = () => {
+    unlockCountdownAudio()
+    onStart()
+  }
+
+  const handleResume = () => {
+    unlockCountdownAudio()
+    onResume()
+  }
 
   useEffect(() => {
     if (session.status !== 'running') {
@@ -95,9 +138,9 @@ export function QuestionPage({
       <GameControls
         status={session.status}
         color={category.color}
-        onStart={onStart}
+        onStart={handleStart}
         onPause={onPause}
-        onResume={onResume}
+        onResume={handleResume}
         onComplete={onComplete}
         onSkip={onSkip}
         onBack={onBack}
