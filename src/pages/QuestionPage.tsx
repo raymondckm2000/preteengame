@@ -16,8 +16,15 @@ interface QuestionPageProps {
   onBack: () => void
 }
 
+type AudioContextConstructor = new () => AudioContext
+
+type WindowWithWebAudio = Window & {
+  webkitAudioContext?: AudioContextConstructor
+}
+
 function playCountdownBeep(remainingSeconds: number) {
-  const AudioContextConstructor = window.AudioContext || window.webkitAudioContext
+  const browserWindow = window as WindowWithWebAudio
+  const AudioContextConstructor = browserWindow.AudioContext ?? browserWindow.webkitAudioContext
 
   if (!AudioContextConstructor) return
 
