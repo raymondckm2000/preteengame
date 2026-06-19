@@ -178,199 +178,192 @@
       "enabled": true
     },
     {
-      "id": "item-001-1781768221585-4-001",
-      "categoryId": "item-001",
-      "text": "恭喜發財",
-      "sortOrder": 4,
-      "enabled": true
-    },
-    {
       "id": "item-001-1781768221585-5-001",
       "categoryId": "item-001",
       "text": "中秋節",
-      "sortOrder": 5,
+      "sortOrder": 4,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-6-001",
       "categoryId": "item-001",
       "text": "超強颱風",
-      "sortOrder": 6,
+      "sortOrder": 5,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-7-001",
       "categoryId": "item-001",
       "text": "打邊爐",
-      "sortOrder": 7,
+      "sortOrder": 6,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-8-001",
       "categoryId": "item-001",
       "text": "咖喱魚蛋",
-      "sortOrder": 8,
+      "sortOrder": 7,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-9-001",
       "categoryId": "item-001",
       "text": "手撕雞",
-      "sortOrder": 9,
+      "sortOrder": 8,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-10-001",
       "categoryId": "item-001",
       "text": "叉燒炒蛋飯",
-      "sortOrder": 10,
+      "sortOrder": 9,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-11-001",
       "categoryId": "item-001",
       "text": "日本拉麵",
-      "sortOrder": 11,
+      "sortOrder": 10,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-12-001",
       "categoryId": "item-001",
       "text": "魚肉燒賣",
-      "sortOrder": 12,
+      "sortOrder": 11,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-13-001",
       "categoryId": "item-001",
       "text": "新年逗利是",
-      "sortOrder": 13,
+      "sortOrder": 12,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-14-001",
       "categoryId": "item-001",
       "text": "麥當勞",
-      "sortOrder": 14,
+      "sortOrder": 13,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-15-001",
       "categoryId": "item-001",
       "text": "蜘蛛俠",
-      "sortOrder": 15,
+      "sortOrder": 14,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-16-001",
       "categoryId": "item-001",
       "text": "多啦A夢",
-      "sortOrder": 16,
+      "sortOrder": 15,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-17-001",
       "categoryId": "item-001",
       "text": "哈利波特",
-      "sortOrder": 17,
+      "sortOrder": 16,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-18-001",
       "categoryId": "item-001",
       "text": "夾公仔機",
-      "sortOrder": 18,
+      "sortOrder": 17,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-19-001",
       "categoryId": "item-001",
       "text": "反斗奇兵",
-      "sortOrder": 19,
+      "sortOrder": 18,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-20-001",
       "categoryId": "item-001",
       "text": "飯團",
-      "sortOrder": 20,
+      "sortOrder": 19,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-21-001",
       "categoryId": "item-001",
       "text": "手機冇電",
-      "sortOrder": 21,
+      "sortOrder": 20,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-22-001",
       "categoryId": "item-001",
       "text": "火山爆發",
-      "sortOrder": 22,
+      "sortOrder": 21,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-23-001",
       "categoryId": "item-001",
       "text": "眼中釘",
-      "sortOrder": 23,
+      "sortOrder": 22,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-24-001",
       "categoryId": "item-001",
       "text": "麥旋風",
-      "sortOrder": 24,
+      "sortOrder": 23,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-25-001",
       "categoryId": "item-001",
       "text": "元気寿司",
-      "sortOrder": 25,
+      "sortOrder": 24,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-26-001",
       "categoryId": "item-001",
       "text": "食爆谷",
-      "sortOrder": 26,
+      "sortOrder": 25,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-27-001",
       "categoryId": "item-001",
       "text": "條路又黑又窄",
-      "sortOrder": 27,
+      "sortOrder": 26,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-28-001",
       "categoryId": "item-001",
       "text": "打機輸咗",
-      "sortOrder": 28,
+      "sortOrder": 27,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-29-001",
       "categoryId": "item-001",
       "text": "考試遲到",
-      "sortOrder": 29,
+      "sortOrder": 28,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-30-001",
       "categoryId": "item-001",
       "text": "放暑假",
-      "sortOrder": 30,
+      "sortOrder": 29,
       "enabled": true
     },
     {
       "id": "item-001-1781768221585-31-001",
       "categoryId": "item-001",
       "text": "狼人殺",
-      "sortOrder": 31,
+      "sortOrder": 30,
       "enabled": true
     },
     {
@@ -811,14 +804,21 @@
       "id": "item-001-1781775716260-1-001",
       "categoryId": "item-001",
       "text": "慶祝生日",
-      "sortOrder": 32,
+      "sortOrder": 31,
       "enabled": true
     },
     {
       "id": "item-001-1781775716260-2-001",
       "categoryId": "item-001",
       "text": "嬰兒",
-      "sortOrder": 33,
+      "sortOrder": 32,
+      "enabled": true
+    },
+    {
+      "id": "action-001",
+      "categoryId": "action",
+      "text": "恭喜發財",
+      "sortOrder": 23,
       "enabled": true
     }
   ]
