@@ -1499,6 +1499,223 @@
       "text": "關東煮",
       "sortOrder": 51,
       "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-1-001",
+      "categoryId": "cantonese",
+      "text": "白撞",
+      "sortOrder": 28,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-2-001",
+      "categoryId": "cantonese",
+      "text": "雞啄唔斷",
+      "sortOrder": 29,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-3-001",
+      "categoryId": "cantonese",
+      "text": "掃墓",
+      "sortOrder": 30,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-4-001",
+      "categoryId": "cantonese",
+      "text": "飄色巡遊",
+      "sortOrder": 31,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-5-001",
+      "categoryId": "cantonese",
+      "text": "口出狂言",
+      "sortOrder": 32,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-6-001",
+      "categoryId": "cantonese",
+      "text": "山窮水盡",
+      "sortOrder": 33,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-7-001",
+      "categoryId": "cantonese",
+      "text": "煙三文魚",
+      "sortOrder": 34,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-8-001",
+      "categoryId": "cantonese",
+      "text": "自助餐",
+      "sortOrder": 35,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-9-001",
+      "categoryId": "cantonese",
+      "text": "機場快綫",
+      "sortOrder": 36,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-10-001",
+      "categoryId": "cantonese",
+      "text": "雕蟲小技",
+      "sortOrder": 37,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-11-001",
+      "categoryId": "cantonese",
+      "text": "談天說地",
+      "sortOrder": 38,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-12-001",
+      "categoryId": "cantonese",
+      "text": "瀨嘢",
+      "sortOrder": 39,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-13-001",
+      "categoryId": "cantonese",
+      "text": "戒指",
+      "sortOrder": 40,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-14-001",
+      "categoryId": "cantonese",
+      "text": "唇槍舌劍",
+      "sortOrder": 41,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-15-001",
+      "categoryId": "cantonese",
+      "text": "揸快車",
+      "sortOrder": 42,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-16-001",
+      "categoryId": "cantonese",
+      "text": "上樑不正下樑歪",
+      "sortOrder": 43,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-17-001",
+      "categoryId": "cantonese",
+      "text": "平安鐘",
+      "sortOrder": 44,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-18-001",
+      "categoryId": "cantonese",
+      "text": "金毛尋回犬",
+      "sortOrder": 45,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-19-001",
+      "categoryId": "cantonese",
+      "text": "分道揚鑣",
+      "sortOrder": 46,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-20-001",
+      "categoryId": "cantonese",
+      "text": "拉布拉多犬",
+      "sortOrder": 47,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-21-001",
+      "categoryId": "cantonese",
+      "text": "光明磊落",
+      "sortOrder": 48,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-22-001",
+      "categoryId": "cantonese",
+      "text": "走青",
+      "sortOrder": 49,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-23-001",
+      "categoryId": "cantonese",
+      "text": "刀削麵",
+      "sortOrder": 50,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-24-001",
+      "categoryId": "cantonese",
+      "text": "雞犬不寧",
+      "sortOrder": 51,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-25-001",
+      "categoryId": "cantonese",
+      "text": "火星人",
+      "sortOrder": 52,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-26-001",
+      "categoryId": "cantonese",
+      "text": "東至",
+      "sortOrder": 53,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-27-001",
+      "categoryId": "cantonese",
+      "text": "飢不擇食",
+      "sortOrder": 54,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-28-001",
+      "categoryId": "cantonese",
+      "text": "鬼鬼鼠鼠",
+      "sortOrder": 55,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-29-001",
+      "categoryId": "cantonese",
+      "text": "雪中送炭",
+      "sortOrder": 56,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-30-001",
+      "categoryId": "cantonese",
+      "text": "眼明手快",
+      "sortOrder": 57,
+      "enabled": true
+    },
+    {
+      "id": "cantonese-1781870592370-31-001",
+      "categoryId": "cantonese",
+      "text": "半途而廢",
+      "sortOrder": 58,
+      "enabled": true
     }
   ]
 }
