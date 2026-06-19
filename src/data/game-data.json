@@ -430,24 +430,17 @@
       "enabled": true
     },
     {
-      "id": "action-1781775564845-10-001",
-      "categoryId": "action",
-      "text": "入咗電梯放屁",
-      "sortOrder": 20,
-      "enabled": true
-    },
-    {
       "id": "action-1781775564845-11-001",
       "categoryId": "action",
       "text": "開遮俾風吹翻",
-      "sortOrder": 21,
+      "sortOrder": 20,
       "enabled": true
     },
     {
       "id": "action-1781775564845-12-001",
       "categoryId": "action",
       "text": "洗完手冇紙巾抹手",
-      "sortOrder": 22,
+      "sortOrder": 21,
       "enabled": true
     },
     {
@@ -818,7 +811,91 @@
       "id": "action-001",
       "categoryId": "action",
       "text": "恭喜發財",
+      "sortOrder": 22,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781857861881-1-001",
+      "categoryId": "teamwork",
+      "text": "鐵達尼號",
+      "sortOrder": 8,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781857861881-2-001",
+      "categoryId": "teamwork",
+      "text": "雙人跳水",
+      "sortOrder": 9,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781857861881-3-001",
+      "categoryId": "teamwork",
+      "text": "坐過山車",
+      "sortOrder": 10,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781857861881-4-001",
+      "categoryId": "teamwork",
+      "text": "划龍舟",
+      "sortOrder": 11,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781857861881-5-001",
+      "categoryId": "teamwork",
+      "text": "相撲",
+      "sortOrder": 12,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781857861881-6-001",
+      "categoryId": "teamwork",
+      "text": "看牙醫",
+      "sortOrder": 13,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781857861881-7-001",
+      "categoryId": "teamwork",
+      "text": "拉大提琴",
+      "sortOrder": 14,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781857861881-8-001",
+      "categoryId": "teamwork",
+      "text": "魔術切身體",
+      "sortOrder": 15,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781857861881-9-001",
+      "categoryId": "teamwork",
+      "text": "老鷹捉小雞",
+      "sortOrder": 16,
+      "enabled": true
+    },
+    {
+      "id": "action-002",
+      "categoryId": "action",
+      "text": "扒龍舟",
       "sortOrder": 23,
+      "enabled": true
+    },
+    {
+      "id": "action-003",
+      "categoryId": "action",
+      "text": "入電梯放屁",
+      "sortOrder": 24,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-001",
+      "categoryId": "teamwork",
+      "text": "扯大纜",
+      "sortOrder": 17,
       "enabled": true
     }
   ]
