@@ -45,48 +45,6 @@
   ],
   "questions": [
     {
-      "id": "english-001",
-      "categoryId": "english",
-      "text": "用英文講出五種食物",
-      "sortOrder": 1,
-      "enabled": true
-    },
-    {
-      "id": "english-002",
-      "categoryId": "english",
-      "text": "用英文介紹自己三句",
-      "sortOrder": 2,
-      "enabled": true
-    },
-    {
-      "id": "english-003",
-      "categoryId": "english",
-      "text": "用英文講出四種動物",
-      "sortOrder": 3,
-      "enabled": true
-    },
-    {
-      "id": "english-004",
-      "categoryId": "english",
-      "text": "用英文形容你今日的心情",
-      "sortOrder": 4,
-      "enabled": true
-    },
-    {
-      "id": "english-005",
-      "categoryId": "english",
-      "text": "用英文講出三樣課室會見到的物件",
-      "sortOrder": 5,
-      "enabled": true
-    },
-    {
-      "id": "english-006",
-      "categoryId": "english",
-      "text": "用英文說出你最喜歡的遊戲及原因",
-      "sortOrder": 6,
-      "enabled": true
-    },
-    {
       "id": "action-1781767671247-1-001",
       "categoryId": "action",
       "text": "追唔到巴士",
@@ -910,6 +868,391 @@
       "categoryId": "action",
       "text": "蝶式",
       "sortOrder": 25,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869586973-1-001",
+      "categoryId": "english",
+      "text": "狗咬狗骨",
+      "sortOrder": 1,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869586973-2-001",
+      "categoryId": "english",
+      "text": "紙包唔住火",
+      "sortOrder": 2,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869586973-3-001",
+      "categoryId": "english",
+      "text": "耳邊風",
+      "sortOrder": 3,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869586973-4-001",
+      "categoryId": "english",
+      "text": "揸快車",
+      "sortOrder": 4,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869586973-5-001",
+      "categoryId": "english",
+      "text": "雕蟲小技",
+      "sortOrder": 5,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869586973-6-001",
+      "categoryId": "english",
+      "text": "燒味拼盤",
+      "sortOrder": 6,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869656012-1-001",
+      "categoryId": "english",
+      "text": "挑機",
+      "sortOrder": 7,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869656012-2-001",
+      "categoryId": "english",
+      "text": "雞同鴨講",
+      "sortOrder": 8,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869656012-3-001",
+      "categoryId": "english",
+      "text": "放飛機",
+      "sortOrder": 9,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869656012-4-001",
+      "categoryId": "english",
+      "text": "出貓",
+      "sortOrder": 10,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869656012-5-001",
+      "categoryId": "english",
+      "text": "分道揚鑣",
+      "sortOrder": 11,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869656012-6-001",
+      "categoryId": "english",
+      "text": "請槍",
+      "sortOrder": 12,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869656012-7-001",
+      "categoryId": "english",
+      "text": "西檸雞",
+      "sortOrder": 13,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869698463-1-001",
+      "categoryId": "english",
+      "text": "掃墓",
+      "sortOrder": 14,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869698463-2-001",
+      "categoryId": "english",
+      "text": "小強",
+      "sortOrder": 15,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869698463-3-001",
+      "categoryId": "english",
+      "text": "刀削麵",
+      "sortOrder": 16,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869698463-4-001",
+      "categoryId": "english",
+      "text": "雞犬不寧",
+      "sortOrder": 17,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869698463-5-001",
+      "categoryId": "english",
+      "text": "火星人",
+      "sortOrder": 18,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869698463-6-001",
+      "categoryId": "english",
+      "text": "放孔明燈",
+      "sortOrder": 19,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869698463-7-001",
+      "categoryId": "english",
+      "text": "砂鍋雲吞雞",
+      "sortOrder": 20,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869698463-8-001",
+      "categoryId": "english",
+      "text": "舞獅",
+      "sortOrder": 21,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-1-001",
+      "categoryId": "english",
+      "text": "龜速",
+      "sortOrder": 22,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-2-001",
+      "categoryId": "english",
+      "text": "糖不甩",
+      "sortOrder": 23,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-3-001",
+      "categoryId": "english",
+      "text": "魚腩",
+      "sortOrder": 24,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-4-001",
+      "categoryId": "english",
+      "text": "飢不擇食",
+      "sortOrder": 25,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-5-001",
+      "categoryId": "english",
+      "text": "落湯雞",
+      "sortOrder": 26,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-6-001",
+      "categoryId": "english",
+      "text": "雪中送炭",
+      "sortOrder": 27,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-7-001",
+      "categoryId": "english",
+      "text": "冷板凳",
+      "sortOrder": 28,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-8-001",
+      "categoryId": "english",
+      "text": "空頭支票",
+      "sortOrder": 29,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-9-001",
+      "categoryId": "english",
+      "text": "白撞",
+      "sortOrder": 30,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-10-001",
+      "categoryId": "english",
+      "text": "油花園",
+      "sortOrder": 31,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-11-001",
+      "categoryId": "english",
+      "text": "食白果",
+      "sortOrder": 32,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-12-001",
+      "categoryId": "english",
+      "text": "相依為命",
+      "sortOrder": 33,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-13-001",
+      "categoryId": "english",
+      "text": "亂噏廿四",
+      "sortOrder": 34,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869787891-14-001",
+      "categoryId": "english",
+      "text": "打小人",
+      "sortOrder": 35,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869818025-1-001",
+      "categoryId": "english",
+      "text": "擺架子",
+      "sortOrder": 36,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-1-001",
+      "categoryId": "english",
+      "text": "恕啤",
+      "sortOrder": 37,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-2-001",
+      "categoryId": "english",
+      "text": "火都嚟",
+      "sortOrder": 38,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-3-001",
+      "categoryId": "english",
+      "text": "回頭是岸",
+      "sortOrder": 39,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-4-001",
+      "categoryId": "english",
+      "text": "鹹水角",
+      "sortOrder": 40,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-5-001",
+      "categoryId": "english",
+      "text": "山頂纜車",
+      "sortOrder": 41,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-6-001",
+      "categoryId": "english",
+      "text": "東鐵列車",
+      "sortOrder": 42,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-7-001",
+      "categoryId": "english",
+      "text": "益生菌",
+      "sortOrder": 43,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-8-001",
+      "categoryId": "english",
+      "text": "咳藥水",
+      "sortOrder": 44,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-9-001",
+      "categoryId": "english",
+      "text": "電動車",
+      "sortOrder": 45,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-10-001",
+      "categoryId": "english",
+      "text": "印尼蝦片",
+      "sortOrder": 46,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-11-001",
+      "categoryId": "english",
+      "text": "沙田",
+      "sortOrder": 47,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-12-001",
+      "categoryId": "english",
+      "text": "觀塘",
+      "sortOrder": 48,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-13-001",
+      "categoryId": "english",
+      "text": "銅鑼灣",
+      "sortOrder": 49,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-14-001",
+      "categoryId": "english",
+      "text": "灣仔",
+      "sortOrder": 50,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-15-001",
+      "categoryId": "english",
+      "text": "將軍澳",
+      "sortOrder": 51,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-16-001",
+      "categoryId": "english",
+      "text": "大圍",
+      "sortOrder": 52,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-17-001",
+      "categoryId": "english",
+      "text": "天水圍",
+      "sortOrder": 53,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-18-001",
+      "categoryId": "english",
+      "text": "青馬大橋",
+      "sortOrder": 54,
+      "enabled": true
+    },
+    {
+      "id": "english-1781869961721-19-001",
+      "categoryId": "english",
+      "text": "赤鱲角機場",
+      "sortOrder": 55,
       "enabled": true
     }
   ]
