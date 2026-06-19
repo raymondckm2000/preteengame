@@ -897,6 +897,20 @@
       "text": "扯大纜",
       "sortOrder": 17,
       "enabled": true
+    },
+    {
+      "id": "teamwork-002",
+      "categoryId": "teamwork",
+      "text": "劍擊",
+      "sortOrder": 18,
+      "enabled": true
+    },
+    {
+      "id": "action-004",
+      "categoryId": "action",
+      "text": "蝶式",
+      "sortOrder": 25,
+      "enabled": true
     }
   ]
 }
