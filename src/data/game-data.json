@@ -1765,6 +1765,62 @@
       "text": "Android手機",
       "sortOrder": 39,
       "enabled": true
+    },
+    {
+      "id": "action-1781958277982-1-001",
+      "categoryId": "action",
+      "text": "摺被",
+      "sortOrder": 26,
+      "enabled": true
+    },
+    {
+      "id": "action-1781958277982-2-001",
+      "categoryId": "action",
+      "text": "晾衫",
+      "sortOrder": 27,
+      "enabled": true
+    },
+    {
+      "id": "action-1781958277982-3-001",
+      "categoryId": "action",
+      "text": "踩單車",
+      "sortOrder": 28,
+      "enabled": true
+    },
+    {
+      "id": "action-1781958319973-1-001",
+      "categoryId": "action",
+      "text": "坐輪椅",
+      "sortOrder": 29,
+      "enabled": true
+    },
+    {
+      "id": "action-1781958319973-2-001",
+      "categoryId": "action",
+      "text": "玩電腦",
+      "sortOrder": 30,
+      "enabled": true
+    },
+    {
+      "id": "action-1781958436321-1-001",
+      "categoryId": "action",
+      "text": "指揮家",
+      "sortOrder": 31,
+      "enabled": true
+    },
+    {
+      "id": "action-1781958436321-2-001",
+      "categoryId": "action",
+      "text": "鼓手",
+      "sortOrder": 32,
+      "enabled": true
+    },
+    {
+      "id": "action-1781958436321-3-001",
+      "categoryId": "action",
+      "text": "拉小提琴",
+      "sortOrder": 33,
+      "enabled": true
     }
   ]
 }
