@@ -2066,6 +2066,20 @@
       "text": "警察查身份證",
       "sortOrder": 45,
       "enabled": true
+    },
+    {
+      "id": "teamwork-1781963605075-1-001",
+      "categoryId": "teamwork",
+      "text": "天鵝湖",
+      "sortOrder": 27,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781963630440-1-001",
+      "categoryId": "item-001",
+      "text": "鑽石山",
+      "sortOrder": 55,
+      "enabled": true
     }
   ]
 }
