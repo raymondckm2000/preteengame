@@ -374,31 +374,24 @@
       "enabled": true
     },
     {
-      "id": "action-1781775564845-8-001",
-      "categoryId": "action",
-      "text": "趕返工搭錯車",
-      "sortOrder": 18,
-      "enabled": true
-    },
-    {
       "id": "action-1781775564845-9-001",
       "categoryId": "action",
       "text": "認錯人",
-      "sortOrder": 19,
+      "sortOrder": 18,
       "enabled": true
     },
     {
       "id": "action-1781775564845-11-001",
       "categoryId": "action",
       "text": "開遮俾風吹翻",
-      "sortOrder": 20,
+      "sortOrder": 19,
       "enabled": true
     },
     {
       "id": "action-1781775564845-12-001",
       "categoryId": "action",
       "text": "洗完手冇紙巾抹手",
-      "sortOrder": 21,
+      "sortOrder": 20,
       "enabled": true
     },
     {
@@ -769,7 +762,7 @@
       "id": "action-001",
       "categoryId": "action",
       "text": "恭喜發財",
-      "sortOrder": 22,
+      "sortOrder": 21,
       "enabled": true
     },
     {
@@ -839,14 +832,14 @@
       "id": "action-002",
       "categoryId": "action",
       "text": "扒龍舟",
-      "sortOrder": 23,
+      "sortOrder": 22,
       "enabled": true
     },
     {
       "id": "action-003",
       "categoryId": "action",
       "text": "入電梯放屁",
-      "sortOrder": 24,
+      "sortOrder": 23,
       "enabled": true
     },
     {
@@ -867,7 +860,7 @@
       "id": "action-004",
       "categoryId": "action",
       "text": "蝶式",
-      "sortOrder": 25,
+      "sortOrder": 24,
       "enabled": true
     },
     {
@@ -1770,56 +1763,56 @@
       "id": "action-1781958277982-1-001",
       "categoryId": "action",
       "text": "摺被",
-      "sortOrder": 26,
+      "sortOrder": 25,
       "enabled": true
     },
     {
       "id": "action-1781958277982-2-001",
       "categoryId": "action",
       "text": "晾衫",
-      "sortOrder": 27,
+      "sortOrder": 26,
       "enabled": true
     },
     {
       "id": "action-1781958277982-3-001",
       "categoryId": "action",
       "text": "踩單車",
-      "sortOrder": 28,
+      "sortOrder": 27,
       "enabled": true
     },
     {
       "id": "action-1781958319973-1-001",
       "categoryId": "action",
       "text": "坐輪椅",
-      "sortOrder": 29,
+      "sortOrder": 28,
       "enabled": true
     },
     {
       "id": "action-1781958319973-2-001",
       "categoryId": "action",
       "text": "玩電腦",
-      "sortOrder": 30,
+      "sortOrder": 29,
       "enabled": true
     },
     {
       "id": "action-1781958436321-1-001",
       "categoryId": "action",
       "text": "指揮家",
-      "sortOrder": 31,
+      "sortOrder": 30,
       "enabled": true
     },
     {
       "id": "action-1781958436321-2-001",
       "categoryId": "action",
       "text": "鼓手",
-      "sortOrder": 32,
+      "sortOrder": 31,
       "enabled": true
     },
     {
       "id": "action-1781958436321-3-001",
       "categoryId": "action",
       "text": "拉小提琴",
-      "sortOrder": 33,
+      "sortOrder": 32,
       "enabled": true
     },
     {
@@ -1847,7 +1840,7 @@
       "id": "action-1781958576017-1-001",
       "categoryId": "action",
       "text": "跆拳道",
-      "sortOrder": 34,
+      "sortOrder": 33,
       "enabled": true
     },
     {
@@ -1861,28 +1854,28 @@
       "id": "action-1781958675208-1-001",
       "categoryId": "action",
       "text": "瑜伽",
-      "sortOrder": 35,
+      "sortOrder": 34,
       "enabled": true
     },
     {
       "id": "action-1781958783324-1-001",
       "categoryId": "action",
       "text": "聽歌",
-      "sortOrder": 36,
+      "sortOrder": 35,
       "enabled": true
     },
     {
       "id": "action-1781958819812-1-001",
       "categoryId": "action",
       "text": "太空漫步",
-      "sortOrder": 37,
+      "sortOrder": 36,
       "enabled": true
     },
     {
       "id": "action-1781958819812-2-001",
       "categoryId": "action",
       "text": "暈船浪",
-      "sortOrder": 38,
+      "sortOrder": 37,
       "enabled": true
     },
     {
