@@ -1982,6 +1982,13 @@
       "text": "燒雞翼",
       "sortOrder": 51,
       "enabled": true
+    },
+    {
+      "id": "teamwork-1781960624823-1-001",
+      "categoryId": "teamwork",
+      "text": "搭升降機",
+      "sortOrder": 21,
+      "enabled": true
     }
   ]
 }
