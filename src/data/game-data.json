@@ -1821,6 +1821,34 @@
       "text": "拉小提琴",
       "sortOrder": 33,
       "enabled": true
+    },
+    {
+      "id": "item-001-1781958550181-1-001",
+      "categoryId": "item-001",
+      "text": "切西瓜",
+      "sortOrder": 40,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781958550181-2-001",
+      "categoryId": "item-001",
+      "text": "士多啤梨",
+      "sortOrder": 41,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781958550181-3-001",
+      "categoryId": "item-001",
+      "text": "警察",
+      "sortOrder": 42,
+      "enabled": true
+    },
+    {
+      "id": "action-1781958576017-1-001",
+      "categoryId": "action",
+      "text": "跆拳道",
+      "sortOrder": 34,
+      "enabled": true
     }
   ]
 }
