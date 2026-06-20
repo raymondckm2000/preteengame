@@ -52,66 +52,59 @@
       "enabled": true
     },
     {
-      "id": "action-1781767671247-2-001",
-      "categoryId": "action",
-      "text": "踩到狗屎",
-      "sortOrder": 2,
-      "enabled": true
-    },
-    {
       "id": "action-1781767671247-3-001",
       "categoryId": "action",
       "text": "笨豬跳",
-      "sortOrder": 3,
+      "sortOrder": 2,
       "enabled": true
     },
     {
       "id": "action-1781767671248-4-001",
       "categoryId": "action",
       "text": "打飛碟",
-      "sortOrder": 4,
+      "sortOrder": 3,
       "enabled": true
     },
     {
       "id": "action-1781767671248-5-001",
       "categoryId": "action",
       "text": "搶籃板",
-      "sortOrder": 5,
+      "sortOrder": 4,
       "enabled": true
     },
     {
       "id": "action-1781767671248-6-001",
       "categoryId": "action",
       "text": "戴眼鏡",
-      "sortOrder": 6,
+      "sortOrder": 5,
       "enabled": true
     },
     {
       "id": "action-1781767671248-7-001",
       "categoryId": "action",
       "text": "尷尬",
-      "sortOrder": 7,
+      "sortOrder": 6,
       "enabled": true
     },
     {
       "id": "action-1781767671248-8-001",
       "categoryId": "action",
       "text": "打喊露",
-      "sortOrder": 8,
+      "sortOrder": 7,
       "enabled": true
     },
     {
       "id": "action-1781767671248-9-001",
       "categoryId": "action",
       "text": "影證件相",
-      "sortOrder": 9,
+      "sortOrder": 8,
       "enabled": true
     },
     {
       "id": "action-1781767671248-10-001",
       "categoryId": "action",
       "text": "去游水",
-      "sortOrder": 10,
+      "sortOrder": 9,
       "enabled": true
     },
     {
@@ -328,70 +321,70 @@
       "id": "action-1781775564845-1-001",
       "categoryId": "action",
       "text": "O晒咀",
-      "sortOrder": 11,
+      "sortOrder": 10,
       "enabled": true
     },
     {
       "id": "action-1781775564845-2-001",
       "categoryId": "action",
       "text": "打機輸咗",
-      "sortOrder": 12,
+      "sortOrder": 11,
       "enabled": true
     },
     {
       "id": "action-1781775564845-3-001",
       "categoryId": "action",
       "text": "考試遲到",
-      "sortOrder": 13,
+      "sortOrder": 12,
       "enabled": true
     },
     {
       "id": "action-1781775564845-4-001",
       "categoryId": "action",
       "text": "手機冇電",
-      "sortOrder": 14,
+      "sortOrder": 13,
       "enabled": true
     },
     {
       "id": "action-1781775564845-5-001",
       "categoryId": "action",
       "text": "食爆谷",
-      "sortOrder": 15,
+      "sortOrder": 14,
       "enabled": true
     },
     {
       "id": "action-1781775564845-6-001",
       "categoryId": "action",
       "text": "玩啤牌",
-      "sortOrder": 16,
+      "sortOrder": 15,
       "enabled": true
     },
     {
       "id": "action-1781775564845-7-001",
       "categoryId": "action",
       "text": "行路踢到腳趾",
-      "sortOrder": 17,
+      "sortOrder": 16,
       "enabled": true
     },
     {
       "id": "action-1781775564845-9-001",
       "categoryId": "action",
       "text": "認錯人",
-      "sortOrder": 18,
+      "sortOrder": 17,
       "enabled": true
     },
     {
       "id": "action-1781775564845-11-001",
       "categoryId": "action",
       "text": "開遮俾風吹翻",
-      "sortOrder": 19,
+      "sortOrder": 18,
       "enabled": true
     },
     {
       "id": "action-1781775564845-12-001",
       "categoryId": "action",
       "text": "洗完手冇紙巾抹手",
-      "sortOrder": 20,
+      "sortOrder": 19,
       "enabled": true
     },
     {
@@ -762,7 +755,7 @@
       "id": "action-001",
       "categoryId": "action",
       "text": "恭喜發財",
-      "sortOrder": 21,
+      "sortOrder": 20,
       "enabled": true
     },
     {
@@ -832,14 +825,14 @@
       "id": "action-002",
       "categoryId": "action",
       "text": "扒龍舟",
-      "sortOrder": 22,
+      "sortOrder": 21,
       "enabled": true
     },
     {
       "id": "action-003",
       "categoryId": "action",
       "text": "入電梯放屁",
-      "sortOrder": 23,
+      "sortOrder": 22,
       "enabled": true
     },
     {
@@ -860,7 +853,7 @@
       "id": "action-004",
       "categoryId": "action",
       "text": "蝶式",
-      "sortOrder": 24,
+      "sortOrder": 23,
       "enabled": true
     },
     {
@@ -1763,56 +1756,56 @@
       "id": "action-1781958277982-1-001",
       "categoryId": "action",
       "text": "摺被",
-      "sortOrder": 25,
+      "sortOrder": 24,
       "enabled": true
     },
     {
       "id": "action-1781958277982-2-001",
       "categoryId": "action",
       "text": "晾衫",
-      "sortOrder": 26,
+      "sortOrder": 25,
       "enabled": true
     },
     {
       "id": "action-1781958277982-3-001",
       "categoryId": "action",
       "text": "踩單車",
-      "sortOrder": 27,
+      "sortOrder": 26,
       "enabled": true
     },
     {
       "id": "action-1781958319973-1-001",
       "categoryId": "action",
       "text": "坐輪椅",
-      "sortOrder": 28,
+      "sortOrder": 27,
       "enabled": true
     },
     {
       "id": "action-1781958319973-2-001",
       "categoryId": "action",
       "text": "玩電腦",
-      "sortOrder": 29,
+      "sortOrder": 28,
       "enabled": true
     },
     {
       "id": "action-1781958436321-1-001",
       "categoryId": "action",
       "text": "指揮家",
-      "sortOrder": 30,
+      "sortOrder": 29,
       "enabled": true
     },
     {
       "id": "action-1781958436321-2-001",
       "categoryId": "action",
       "text": "鼓手",
-      "sortOrder": 31,
+      "sortOrder": 30,
       "enabled": true
     },
     {
       "id": "action-1781958436321-3-001",
       "categoryId": "action",
       "text": "拉小提琴",
-      "sortOrder": 32,
+      "sortOrder": 31,
       "enabled": true
     },
     {
@@ -1840,7 +1833,7 @@
       "id": "action-1781958576017-1-001",
       "categoryId": "action",
       "text": "跆拳道",
-      "sortOrder": 33,
+      "sortOrder": 32,
       "enabled": true
     },
     {
@@ -1854,28 +1847,28 @@
       "id": "action-1781958675208-1-001",
       "categoryId": "action",
       "text": "瑜伽",
-      "sortOrder": 34,
+      "sortOrder": 33,
       "enabled": true
     },
     {
       "id": "action-1781958783324-1-001",
       "categoryId": "action",
       "text": "聽歌",
-      "sortOrder": 35,
+      "sortOrder": 34,
       "enabled": true
     },
     {
       "id": "action-1781958819812-1-001",
       "categoryId": "action",
       "text": "太空漫步",
-      "sortOrder": 36,
+      "sortOrder": 35,
       "enabled": true
     },
     {
       "id": "action-1781958819812-2-001",
       "categoryId": "action",
       "text": "暈船浪",
-      "sortOrder": 37,
+      "sortOrder": 36,
       "enabled": true
     },
     {
@@ -1890,6 +1883,83 @@
       "categoryId": "item-001",
       "text": "水龍頭",
       "sortOrder": 45,
+      "enabled": true
+    },
+    {
+      "id": "action-1781960029673-1-001",
+      "categoryId": "action",
+      "text": "發惡夢",
+      "sortOrder": 37,
+      "enabled": true
+    },
+    {
+      "id": "action-1781960029673-2-001",
+      "categoryId": "action",
+      "text": "拉行李篋",
+      "sortOrder": 38,
+      "enabled": true
+    },
+    {
+      "id": "action-1781960029674-3-001",
+      "categoryId": "action",
+      "text": "睇手機",
+      "sortOrder": 39,
+      "enabled": true
+    },
+    {
+      "id": "action-1781960029674-4-001",
+      "categoryId": "action",
+      "text": "衝出馬路",
+      "sortOrder": 40,
+      "enabled": true
+    },
+    {
+      "id": "action-1781960029674-5-001",
+      "categoryId": "action",
+      "text": "等巴士",
+      "sortOrder": 41,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781960066442-1-001",
+      "categoryId": "item-001",
+      "text": "聖誕老人",
+      "sortOrder": 46,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781960105295-1-001",
+      "categoryId": "item-001",
+      "text": "汽車充電",
+      "sortOrder": 47,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781960163594-1-001",
+      "categoryId": "item-001",
+      "text": "紅綠燈",
+      "sortOrder": 48,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781960163594-2-001",
+      "categoryId": "item-001",
+      "text": "輕鐵",
+      "sortOrder": 49,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781960191604-1-001",
+      "categoryId": "item-001",
+      "text": "肥貓",
+      "sortOrder": 50,
+      "enabled": true
+    },
+    {
+      "id": "action-1781960238958-1-001",
+      "categoryId": "action",
+      "text": "踩狗屎",
+      "sortOrder": 42,
       "enabled": true
     }
   ]
