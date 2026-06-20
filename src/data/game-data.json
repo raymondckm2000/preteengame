@@ -808,13 +808,6 @@
       "enabled": true
     },
     {
-      "id": "teamwork-1781857861881-9-001",
-      "categoryId": "teamwork",
-      "text": "老鷹捉小雞",
-      "sortOrder": 15,
-      "enabled": true
-    },
-    {
       "id": "action-002",
       "categoryId": "action",
       "text": "扒龍舟",
@@ -829,17 +822,10 @@
       "enabled": true
     },
     {
-      "id": "teamwork-001",
-      "categoryId": "teamwork",
-      "text": "扯大纜",
-      "sortOrder": 16,
-      "enabled": true
-    },
-    {
       "id": "teamwork-002",
       "categoryId": "teamwork",
       "text": "劍擊",
-      "sortOrder": 17,
+      "sortOrder": 15,
       "enabled": true
     },
     {
@@ -1959,14 +1945,14 @@
       "id": "teamwork-1781960299961-1-001",
       "categoryId": "teamwork",
       "text": "馬騮捉蝨",
-      "sortOrder": 18,
+      "sortOrder": 16,
       "enabled": true
     },
     {
       "id": "teamwork-1781960569623-1-001",
       "categoryId": "teamwork",
       "text": "射龍門",
-      "sortOrder": 19,
+      "sortOrder": 17,
       "enabled": true
     },
     {
@@ -1980,14 +1966,14 @@
       "id": "teamwork-1781960624823-1-001",
       "categoryId": "teamwork",
       "text": "搭升降機",
-      "sortOrder": 20,
+      "sortOrder": 18,
       "enabled": true
     },
     {
       "id": "teamwork-1781960923210-1-001",
       "categoryId": "teamwork",
       "text": "玩獨木舟",
-      "sortOrder": 21,
+      "sortOrder": 19,
       "enabled": true
     },
     {
@@ -2015,28 +2001,56 @@
       "id": "teamwork-1781961423398-1-001",
       "categoryId": "teamwork",
       "text": "剪頭髮",
-      "sortOrder": 22,
+      "sortOrder": 20,
       "enabled": true
     },
     {
       "id": "teamwork-1781961436520-1-001",
       "categoryId": "teamwork",
       "text": "肩頸按摩",
-      "sortOrder": 23,
+      "sortOrder": 21,
       "enabled": true
     },
     {
       "id": "teamwork-1781961766297-1-001",
       "categoryId": "teamwork",
       "text": "喜怒哀樂",
-      "sortOrder": 24,
+      "sortOrder": 22,
       "enabled": true
     },
     {
       "id": "teamwork-1781961791600-1-001",
       "categoryId": "teamwork",
       "text": "大學畢業",
+      "sortOrder": 23,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781961898649-1-001",
+      "categoryId": "teamwork",
+      "text": "天雨路滑",
+      "sortOrder": 24,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781961935094-1-001",
+      "categoryId": "teamwork",
+      "text": "麻鷹捉雞仔",
       "sortOrder": 25,
+      "enabled": true
+    },
+    {
+      "id": "teamwork-1781961967252-1-001",
+      "categoryId": "teamwork",
+      "text": "拔河",
+      "sortOrder": 26,
+      "enabled": true
+    },
+    {
+      "id": "action-1781961984273-1-001",
+      "categoryId": "action",
+      "text": "放空",
+      "sortOrder": 43,
       "enabled": true
     }
   ]
