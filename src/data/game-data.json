@@ -1968,6 +1968,20 @@
       "text": "馬騮捉蝨",
       "sortOrder": 19,
       "enabled": true
+    },
+    {
+      "id": "teamwork-1781960569623-1-001",
+      "categoryId": "teamwork",
+      "text": "射龍門",
+      "sortOrder": 20,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781960594158-1-001",
+      "categoryId": "item-001",
+      "text": "燒雞翼",
+      "sortOrder": 51,
+      "enabled": true
     }
   ]
 }
