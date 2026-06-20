@@ -1989,6 +1989,13 @@
       "text": "搭升降機",
       "sortOrder": 21,
       "enabled": true
+    },
+    {
+      "id": "teamwork-1781960923210-1-001",
+      "categoryId": "teamwork",
+      "text": "玩獨木舟",
+      "sortOrder": 22,
+      "enabled": true
     }
   ]
 }
