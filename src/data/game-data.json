@@ -2052,6 +2052,20 @@
       "text": "放空",
       "sortOrder": 43,
       "enabled": true
+    },
+    {
+      "id": "action-1781962126898-1-001",
+      "categoryId": "action",
+      "text": "賣旗",
+      "sortOrder": 44,
+      "enabled": true
+    },
+    {
+      "id": "action-1781962245680-1-001",
+      "categoryId": "action",
+      "text": "警察查身份證",
+      "sortOrder": 45,
+      "enabled": true
     }
   ]
 }
