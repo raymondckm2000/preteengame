@@ -1884,6 +1884,20 @@
       "text": "暈船浪",
       "sortOrder": 38,
       "enabled": true
+    },
+    {
+      "id": "item-001-1781958889883-1-001",
+      "categoryId": "item-001",
+      "text": "教堂",
+      "sortOrder": 44,
+      "enabled": true
+    },
+    {
+      "id": "item-001-1781958889883-2-001",
+      "categoryId": "item-001",
+      "text": "水龍頭",
+      "sortOrder": 45,
+      "enabled": true
     }
   ]
 }
