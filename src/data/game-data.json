@@ -1849,6 +1849,20 @@
       "text": "跆拳道",
       "sortOrder": 34,
       "enabled": true
+    },
+    {
+      "id": "item-001-1781958654889-1-001",
+      "categoryId": "item-001",
+      "text": "淋花",
+      "sortOrder": 43,
+      "enabled": true
+    },
+    {
+      "id": "action-1781958675208-1-001",
+      "categoryId": "action",
+      "text": "瑜伽",
+      "sortOrder": 35,
+      "enabled": true
     }
   ]
 }
